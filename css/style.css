@@ -67,10 +67,13 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   border-radius: 12px; 
   box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
   scroll-snap-align: center; 
+  text-align: left; 
 }
-.report-card embed { width: 100%; height: 600px; border: none; }
-.report-card p { margin-top: 20px; }
+.report-card h3 { color: #dc143c; margin-bottom: 15px; font-size: 1.6rem; }
+.report-card embed { width: 100%; height: 600px; border: none; border-radius: 8px; }
+.report-card p { margin-top: 20px; text-align: center; }
 
+/* MOBILE FIXES – full-width header, cover, centered content */
 @media (max-width: 768px) {
   .menu-toggle { display: block; }
   nav ul { display: none; flex-direction: column; background: #dc143c; padding: 20px; }
@@ -84,10 +87,20 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   section { padding: 80px 20px; }
   .btn { padding: 12px 30px; font-size: 1rem; }
   .today-match { font-size: 1.4rem; }
-  .programme-cover { max-width: 300px; }
+  .programme-cover { 
+    max-width: 100%; 
+    height: auto; 
+    margin: 20px 0; 
+    border: none; 
+    border-radius: 0; 
+    box-shadow: none; 
+  }
   .sponsors-list { gap: 30px; }
   .sponsor-logo-footer { height: 60px; }
   .sponsors-footer::after { width: 30px; }
   .report-card { flex: 0 0 95%; }
   .report-card embed { height: 500px; }
+  .content-wrapper { padding: 0 10px; }
+  .table-container { width: 100%; max-width: 100%; }
+  header { padding: 20px 0; }
 }
