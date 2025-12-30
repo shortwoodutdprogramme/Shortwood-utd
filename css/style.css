@@ -1,8 +1,21 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
 
-header { background-color: #dc143c; padding: 30px 20px; text-align: center; color: white; }
-.header-content { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; }
+header { 
+  background-color: #dc143c; 
+  padding: 30px 20px; 
+  text-align: center; 
+  color: white; 
+}
+.header-content { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+  max-width: 1400px; 
+  margin: 0 auto; 
+}
 .badge { width: 120px; height: auto; }
 .logo { font-size: 2.8rem; font-weight: bold; color: white; }
 .menu-toggle { display: none; font-size: 2rem; cursor: pointer; position: absolute; right: 20px; top: 40px; color: white; }
@@ -65,7 +78,12 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
 
 /* MOBILE FIXES – full-width header, cover, centered content */
 @media (max-width: 768px) {
-  header { padding: 20px 0; }
+  header { 
+    width: 100vw; 
+    margin-left: calc(-50vw + 50%); 
+    margin-right: calc(-50vw + 50%); 
+    padding: 20px 0; 
+  }
   .header-content { padding: 0 20px; max-width: 100%; }
   .menu-toggle { display: block; }
   nav ul { display: none; flex-direction: column; background: #dc143c; padding: 20px; }
@@ -79,9 +97,12 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   .btn { padding: 12px 30px; font-size: 1rem; }
   .today-match { font-size: 1.4rem; }
   .programme-cover { 
-    max-width: 100%; 
+    width: 100vw; 
+    max-width: none; 
     height: auto; 
     margin: 20px 0; 
+    margin-left: calc(-50vw + 50%); 
+    margin-right: calc(-50vw + 50%); 
     border: none; 
     border-radius: 0; 
     box-shadow: none; 
@@ -92,4 +113,17 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   .report-card embed { height: 500px; }
   .content-wrapper { padding: 0 10px; }
   .table-container { width: 100%; max-width: 100%; }
+}
+
+/* TABLET FIXES */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content-wrapper { max-width: 900px; padding: 0 30px; }
+  .programme-cover { max-width: 600px; margin: 40px auto; }
+  .hero h1 { font-size: 3.2rem; }
+  .section-title { font-size: 2.6rem; }
+  .btn { padding: 14px 34px; font-size: 1.1rem; }
+  .table-container { max-width: 800px; }
+  table { font-size: 1.1rem; }
+  .sponsors-list { gap: 35px; }
+  .sponsor-logo-footer { height: 70px; }
 }
