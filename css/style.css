@@ -384,4 +384,64 @@
         margin: 20px 0;
       }
     }
+
+/* Full-width header on mobile */
+header {
+  padding: 20px 0;
+  text-align: center;
+}
+.header-content {
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Full-width hero and matches section on mobile */
+.hero, #matches {
+  padding: 60px 0;
+}
+.hero .content-wrapper, #matches .content-wrapper {
+  padding: 0 20px;
+  max-width: 100%;
+}
+
+/* Programme cover full-width and centered on mobile */
+.programme-cover {
+  max-width: 100%;
+  height: auto;
+  margin: 30px 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Ensure all text centered */
+.content-wrapper {
+  text-align: center;
+}
+
+/* Mobile specific full-width adjustments */
+@media (max-width: 768px) {
+  header {
+    background-color: #dc143c;
+  }
+  .hero {
+    padding: 80px 0;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero p {
+    font-size: 1.4rem;
+    padding: 0 20px;
+  }
+  .today-match {
+    font-size: 1.6rem;
+    padding: 0 20px;
+  }
+  .programme-cover {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
   </style>
