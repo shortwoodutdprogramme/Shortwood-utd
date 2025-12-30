@@ -50,12 +50,36 @@
     .sponsor-logo-footer:hover { transform: scale(1.1); }
     .sponsors-footer::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 40px; background: linear-gradient(to left, #f8f8f8, transparent); pointer-events: none; }
 
-    /* Swipeable Reports Carousel */
-    .reports-carousel { overflow-x: auto; display: flex; gap: 30px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 20px 0; }
-    .report-card { flex: 0 0 80%; max-width: 800px; background: rgba(255,255,255,0.9); padding: 30px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); scroll-snap-align: center; text-align: left; }
-    .report-card h3 { color: #dc143c; margin-bottom: 15px; font-size: 1.6rem; }
-    .report-card embed { width: 100%; height: 600px; border: none; border-radius: 8px; }
-    .report-card p { margin-top: 20px; text-align: center; }
+    /* Updated Reports Carousel – full width, overlapping cards, embedded PDFs on same page */
+    .reports-carousel { 
+      display: flex; 
+      overflow-x: auto; 
+      gap: 20px; 
+      scroll-snap-type: x mandatory; 
+      -webkit-overflow-scrolling: touch; 
+      padding: 20px 0 40px 0; 
+      scroll-padding: 50%; /* Centers cards */
+    }
+    .report-card { 
+      flex: 0 0 90%; 
+      max-width: 90%; 
+      background: white; 
+      border-radius: 16px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+      overflow: hidden; 
+      scroll-snap-align: center; 
+      margin: 0 5%; /* Overlap effect */
+      transition: transform 0.3s; 
+    }
+    .report-card:hover { transform: scale(1.02); z-index: 10; }
+    .report-card h3 { 
+      background: #dc143c; 
+      color: white; 
+      padding: 20px; 
+      margin: 0; 
+      font-size: 1.6rem; 
+    }
+    .report-card embed { width: 100%; height: 800px; border: none; }
 
     .archive-button { background-color: #333; color: white; padding: 30px 20px; text-align: center; }
     .archive-button a { color: white; font-size: 1rem; }
@@ -79,8 +103,8 @@
       .sponsors-list { gap: 30px; }
       .sponsor-logo-footer { height: 60px; }
       .sponsors-footer::after { width: 30px; }
-      .report-card { flex: 0 0 95%; }
-      .report-card embed { height: 500px; }
+      .report-card { flex: 0 0 95%; margin: 0 2.5%; }
+      .report-card embed { height: 600px; }
     }
   </style>
 </head>
@@ -169,46 +193,40 @@
     </section>
 
     <section id="reports" class="bg-crimson">
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="max-width: none; padding: 0 20px;">
         <h2 class="section-title">Matchday Reports</h2>
         <p>Swipe left/right to view reports – newest first</p>
 
         <div class="reports-carousel">
-          <!-- Your uploaded reports – newest at top (left) -->
+          <!-- Your reports – newest at top (left) -->
           <div class="report-card">
             <h3>vs Newent Town – 20 Dec 2025</h3>
             <embed src="reports/Shortwood vs Newent Town 20-12-2025.pdf" type="application/pdf">
-            <p><a href="reports/Shortwood vs Newent Town 20-12-2025.pdf" class="btn" download>Download Report</a></p>
           </div>
 
           <div class="report-card">
             <h3>v Tytherington Rocks</h3>
             <embed src="reports/Shortwood v Tytherington Rocks.pdf" type="application/pdf">
-            <p><a href="reports/Shortwood v Tytherington Rocks.pdf" class="btn" download>Download Report</a></p>
           </div>
 
           <div class="report-card">
             <h3>v Ludlow (Supp Cup)</h3>
             <embed src="reports/Shortwood v Ludlow (supp cup).pdf" type="application/pdf">
-            <p><a href="reports/Shortwood v Ludlow (supp cup).pdf" class="btn" download>Download Report</a></p>
           </div>
 
           <div class="report-card">
             <h3>v Cheltenham Saracens</h3>
             <embed src="reports/Shortwood v Cheltenham Saracens.pdf" type="application/pdf">
-            <p><a href="reports/Shortwood v Cheltenham Saracens.pdf" class="btn" download>Download Report</a></p>
           </div>
 
           <div class="report-card">
             <h3>v Bourton Rovers Devs</h3>
             <embed src="reports/Shortwood v Bourton Rovers Devs.pdf" type="application/pdf">
-            <p><a href="reports/Shortwood v Bourton Rovers Devs.pdf" class="btn" download>Download Report</a></p>
           </div>
 
           <div class="report-card">
             <h3>Stret v Shortwood Reserves (FAV)</h3>
             <embed src="reports/Stret v Shortwood (FAV) Blakeney v Shortwood Reserves.pdf" type="application/pdf">
-            <p><a href="reports/Stret v Shortwood (FAV) Blakeney v Shortwood Reserves.pdf" class="btn" download>Download Report</a></p>
           </div>
         </div>
       </div>
