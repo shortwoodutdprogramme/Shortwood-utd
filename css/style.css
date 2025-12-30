@@ -52,7 +52,23 @@ section { padding: 100px 20px; text-align: center; display: flex; flex-direction
 .bg-crimson .btn:hover { background-color: #f0f0f0; }
 
 .today-match { font-size: 1.8rem; color: #dc143c; font-weight: bold; margin-bottom: 30px; }
-.programme-cover { max-width: 500px; margin: 40px auto; border: 6px solid #dc143c; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+.programme-cover { 
+  max-width: 350px; 
+  width: 90%; 
+  height: auto; 
+  margin: 40px auto; 
+  border: 6px solid #dc143c; 
+  border-radius: 12px; 
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
+}
+
+/* Mobile – even smaller */
+@media (max-width: 768px) {
+  .programme-cover { 
+    max-width: 280px; 
+    width: 85%; 
+  }
+}
 
 .table-container { overflow-x: auto; margin: 40px 0; -webkit-overflow-scrolling: touch; width: 100%; max-width: 900px; }
 table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 1.1rem; }
