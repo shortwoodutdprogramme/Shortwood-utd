@@ -3,176 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shortwood UTD</title>
+  <title>Shortwood United</title>
 
   <style>
-    /* =====================
-       RESET & BASE STYLES
-    ====================== */
-    *, *::before, *::after {
-      box-sizing: border-box;
+    /* RESET */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-      padding-left: max(1rem, env(safe-area-inset-left));
-      padding-right: max(1rem, env(safe-area-inset-right));
+      background: #ffffff;
+      color: #222;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* =====================
-       HEADER
-    ====================== */
-    header {
+    /* ===== HEADER ===== */
+    .header {
       background: #222;
       color: #fff;
-    }
-
-    .top-header {
       text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 25px 10px 15px;
     }
 
-    .top-header h1 {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      margin-bottom: 0.3rem;
+    .header h1 {
+      font-size: 26px;
+      font-weight: normal;
     }
 
-    .top-header p {
-      font-size: 0.95rem;
-      opacity: 0.85;
+    .header p {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 4px;
     }
 
-    /* =====================
-       NAVIGATION
-    ====================== */
-    nav {
+    /* ===== NAV BAR ===== */
+    .nav {
       background: #333;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 0.75rem 1rem;
+      gap: 20px;
+      padding: 8px 10px;
       flex-wrap: wrap;
     }
 
-    nav a {
+    .nav a {
       color: #fff;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 12px;
     }
 
-    nav a:hover {
+    .nav a:hover {
       text-decoration: underline;
     }
 
-    /* =====================
-       HERO SECTION
-    ====================== */
+    /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.55)
-      ),
-      url("https://via.placeholder.com/1400x600") center / cover no-repeat;
+      background: #777;
       color: #fff;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 60px 15px;
     }
 
     .hero h2 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      margin-bottom: 0.75rem;
+      font-size: 26px;
+      margin-bottom: 10px;
+      font-weight: normal;
     }
 
     .hero p {
+      font-size: 12px;
       max-width: 700px;
       margin: auto;
-      font-size: 1.05rem;
     }
 
-    /* =====================
-       MAIN CONTENT
-    ====================== */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem 1rem;
+    /* ===== MAIN CONTENT ===== */
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 15px;
     }
 
-    .section-title {
+    .content h3 {
       text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-title h3 {
-      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-size: 20px;
+      margin-bottom: 25px;
+      font-weight: normal;
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
     }
 
     .card {
       background: #fff;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: left;
     }
 
     .card h4 {
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 14px;
+      margin-bottom: 8px;
     }
 
-    /* =====================
-       INFO STRIP
-    ====================== */
-    .info-strip {
+    .card p {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* ===== INFO STRIP ===== */
+    .info {
       background: #333;
       color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 15px;
+      font-size: 12px;
     }
 
-    .info-strip p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1rem;
-    }
-
-    /* =====================
-       FOOTER
-    ====================== */
-    footer {
+    /* ===== FOOTER ===== */
+    .footer {
       background: #222;
       color: #fff;
       text-align: center;
-      padding: 1.25rem;
-      font-size: 0.85rem;
+      padding: 10px;
+      font-size: 11px;
     }
 
-    /* =====================
-       MOBILE TWEAKS
-    ====================== */
+    /* ===== MOBILE FIXES ===== */
     @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 0.75rem;
+      .hero {
+        padding: 40px 15px;
       }
 
-      .hero {
-        padding: 3rem 1rem;
+      .hero h2 {
+        font-size: 22px;
+      }
+
+      .cards {
+        gap: 15px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 320px;
       }
     }
   </style>
@@ -180,35 +160,32 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="top-header">
-      <h1>Shortwood United</h1>
-      <p>Community Football Club</p>
-    </div>
+  <div class="header">
+    <h1>Shortwood United</h1>
+    <p>Community Football Club</p>
+  </div>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Fixtures</a>
-      <a href="#">Results</a>
-      <a href="#">Teams</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <!-- NAV -->
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Fixtures</a>
+    <a href="#">Results</a>
+    <a href="#">Teams</a>
+    <a href="#">Contact</a>
+  </div>
 
   <!-- HERO -->
-  <section class="hero">
+  <div class="hero">
     <h2>Welcome to Shortwood UTD</h2>
     <p>
-      Representing our community with pride, passion,
-      and commitment on and off the pitch.
+      Representing our community with pride, passion, and commitment
+      on and off the pitch.
     </p>
-  </section>
+  </div>
 
-  <!-- ABOUT -->
-  <section class="container">
-    <div class="section-title">
-      <h3>About the Club</h3>
-    </div>
+  <!-- CONTENT -->
+  <div class="content">
+    <h3>About the Club</h3>
 
     <div class="cards">
       <div class="card">
@@ -235,20 +212,18 @@
         </p>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- INFO STRIP -->
-  <section class="info-strip">
-    <p>
-      Interested in playing, volunteering, or sponsoring the club?
-      Get in touch and become part of Shortwood UTD.
-    </p>
-  </section>
+  <div class="info">
+    Interested in playing, volunteering, or sponsoring the club?
+    Get in touch and become part of Shortwood UTD.
+  </div>
 
   <!-- FOOTER -->
-  <footer>
-    &copy; 2025 Shortwood United Football Club. All rights reserved.
-  </footer>
+  <div class="footer">
+    © 2025 Shortwood United Football Club. All rights reserved.
+  </div>
 
 </body>
 </html>
