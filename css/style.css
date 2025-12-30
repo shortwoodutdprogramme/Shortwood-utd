@@ -128,3 +128,34 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   .sponsors-list { gap: 35px; }
   .sponsor-logo-footer { height: 70px; }
 }
+/* Full-width sections on mobile – no white space on sides */
+header, .hero, #matches {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Full-width programme cover on mobile */
+.programme-cover {
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  margin: 20px calc(-50vw + 50%);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Ensure content wrapper doesn't limit width on mobile */
+@media (max-width: 768px) {
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
