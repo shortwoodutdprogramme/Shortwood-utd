@@ -279,8 +279,34 @@
 
     /* MOBILE FIXES */
     @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
+  .menu-toggle { display: block; }
+  nav ul { display: none; flex-direction: column; background: #dc143c; padding: 20px; }
+  nav ul.active { display: flex; }
+  .header-content { flex-direction: column; }
+  .badge { width: 100px; }
+  .logo { font-size: 2.2rem; }
+  .hero h1 { font-size: 2.6rem; }
+  .hero p { font-size: 1.3rem; }
+  .section-title { font-size: 2.2rem; }
+  section { padding: 80px 20px; }
+  .btn { padding: 12px 30px; font-size: 1rem; }
+  .today-match { font-size: 1.4rem; }
+  .programme-cover { 
+    max-width: 100%; 
+    height: auto; 
+    margin: 20px 0; 
+    border: none; 
+    border-radius: 0; 
+    box-shadow: none; 
+  }
+  .sponsors-list { gap: 30px; }
+  .sponsor-logo-footer { height: 60px; }
+  .sponsors-footer::after { width: 30px; }
+  .report-card { flex: 0 0 95%; margin: 0 2.5%; }
+  .report-card embed { height: 500px; }
+  .content-wrapper { padding: 0 10px; }
+  .table-container { width: 100%; max-width: 100%; }
+}
       }
       nav ul {
         display: none;
