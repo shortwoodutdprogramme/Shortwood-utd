@@ -93,43 +93,47 @@
     <section id="reports" class="bg-crimson">
       <div class="content-wrapper">
         <h2 class="section-title">Matchday Reports</h2>
-        <p>Swipe left/right or tap a card to view full report</p>
+        <p>Swipe left/right to view reports – newest first</p>
 
         <div class="reports-carousel">
-          <div class="report-card" data-pdf="reports/Shortwood vs Newent Town 20-12-2025.pdf">
+          <div class="report-card">
             <h3>vs Newent Town – 20 Dec 2025</h3>
+            <embed src="reports/Shortwood vs Newent Town 20-12-2025.pdf" type="application/pdf">
+            <p><a href="reports/Shortwood vs Newent Town 20-12-2025.pdf" class="btn" download>Download Report</a></p>
           </div>
 
-          <div class="report-card" data-pdf="reports/Shortwood v Tytherington Rocks.pdf">
+          <div class="report-card">
             <h3>v Tytherington Rocks</h3>
+            <embed src="reports/Shortwood v Tytherington Rocks.pdf" type="application/pdf">
+            <p><a href="reports/Shortwood v Tytherington Rocks.pdf" class="btn" download>Download Report</a></p>
           </div>
 
-          <div class="report-card" data-pdf="reports/Shortwood v Ludlow (supp cup).pdf">
+          <div class="report-card">
             <h3>v Ludlow (Supp Cup)</h3>
+            <embed src="reports/Shortwood v Ludlow (supp cup).pdf" type="application/pdf">
+            <p><a href="reports/Shortwood v Ludlow (supp cup).pdf" class="btn" download>Download Report</a></p>
           </div>
 
-          <div class="report-card" data-pdf="reports/Shortwood v Cheltenham Saracens.pdf">
+          <div class="report-card">
             <h3>v Cheltenham Saracens</h3>
+            <embed src="reports/Shortwood v Cheltenham Saracens.pdf" type="application/pdf">
+            <p><a href="reports/Shortwood v Cheltenham Saracens.pdf" class="btn" download>Download Report</a></p>
           </div>
 
-          <div class="report-card" data-pdf="reports/Shortwood v Bourton Rovers Devs.pdf">
+          <div class="report-card">
             <h3>v Bourton Rovers Devs</h3>
+            <embed src="reports/Shortwood v Bourton Rovers Devs.pdf" type="application/pdf">
+            <p><a href="reports/Shortwood v Bourton Rovers Devs.pdf" class="btn" download>Download Report</a></p>
           </div>
 
-          <div class="report-card" data-pdf="reports/Stret v Shortwood (FAV) Blakeney v Shortwood Reserves.pdf">
+          <div class="report-card">
             <h3>Stret v Shortwood Reserves (FAV)</h3>
+            <embed src="reports/Stret v Shortwood (FAV) Blakeney v Shortwood Reserves.pdf" type="application/pdf">
+            <p><a href="reports/Stret v Shortwood (FAV) Blakeney v Shortwood Reserves.pdf" class="btn" download>Download Report</a></p>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Full-screen report modal -->
-    <div id="report-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">×</span>
-        <embed id="modal-embed" type="application/pdf">
-      </div>
-    </div>
 
     <section id="community" class="bg-white">
       <div class="content-wrapper">
@@ -183,34 +187,8 @@
   </main>
 
   <script>
-    // Menu toggle
     document.querySelector('.menu-toggle').addEventListener('click', function() {
       document.querySelector('nav ul').classList.toggle('active');
-    });
-
-    // Report modal
-    const modal = document.getElementById('report-modal');
-    const modalEmbed = document.getElementById('modal-embed');
-    const closeBtn = document.querySelector('.close');
-
-    document.querySelectorAll('.report-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const pdfUrl = card.getAttribute('data-pdf');
-        modalEmbed.src = pdfUrl;
-        modal.style.display = 'block';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      modalEmbed.src = '';
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        modalEmbed.src = '';
-      }
     });
   </script>
 </body>
