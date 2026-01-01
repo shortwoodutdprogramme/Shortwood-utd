@@ -111,27 +111,20 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   .sponsors-list { gap: 35px; }
   .sponsor-logo-footer { height: 70px; }
 
-/* Button very close to header with tiny gap */
-.close-to-header {
-  margin: 12px auto 70px; /* 12px top gap = tiny space from header */
+/* Button further up – small gap from header, larger gap below */
+.upper-btn {
+  margin: 15px auto 100px; /* 15px from header, 100px gap to heading */
   display: block;
-  max-width: 300px;
+  max-width: 320px;
   text-align: center;
-  padding: 12px 30px;
 }
 
-/* Mobile – even tighter */
+/* Mobile – tighter but still clear separation */
 @media (max-width: 768px) {
-  .close-to-header {
-    margin: 10px auto 60px; /* Tiny 10px gap on mobile */
+  .upper-btn {
+    margin: 12px auto 80px; /* Very close to header on mobile */
+    padding: 12px 28px;
     font-size: 1rem;
     max-width: 280px;
   }
-}
-
-
-
-
-
-
 }
