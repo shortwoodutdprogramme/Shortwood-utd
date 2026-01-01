@@ -110,4 +110,28 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   table { font-size: 1.1rem; }
   .sponsors-list { gap: 35px; }
   .sponsor-logo-footer { height: 70px; }
+
+/* Button very close to header with tiny gap */
+.close-to-header {
+  margin: 12px auto 70px; /* 12px top gap = tiny space from header */
+  display: block;
+  max-width: 300px;
+  text-align: center;
+  padding: 12px 30px;
+}
+
+/* Mobile – even tighter */
+@media (max-width: 768px) {
+  .close-to-header {
+    margin: 10px auto 60px; /* Tiny 10px gap on mobile */
+    font-size: 1rem;
+    max-width: 280px;
+  }
+}
+
+
+
+
+
+
 }
