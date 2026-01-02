@@ -1,3 +1,5 @@
+body { background: yellow; }
+
 /* Layout container */
 .container {
   max-width: 1200px;
