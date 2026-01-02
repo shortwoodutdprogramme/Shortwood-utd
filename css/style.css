@@ -128,3 +128,18 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
     max-width: 280px;
   }
 }
+
+/* Reduce hero top padding to move button closer to header */
+.hero {
+  padding-top: 20px; /* Small gap from header (was 140px) */
+  padding-bottom: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Mobile – keep small gap */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 15px; /* Even smaller gap on mobile */
+  }
+}
