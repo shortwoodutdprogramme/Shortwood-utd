@@ -33,10 +33,10 @@ section { padding: 100px 20px; text-align: center; display: flex; flex-direction
 .bg-crimson .btn:hover { background-color: #f0f0f0; }
 
 .today-match { font-size: 1.8rem; color: #dc143c; font-weight: bold; margin-bottom: 30px; }
-.programme-cover { max-width: 500px; width: 100%; height: auto; margin: 40px auto; border: 6px solid #dc143c; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+.programme-cover { max-width: 500px; margin: 40px auto; border: 6px solid #dc143c; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
 
-.table-container { overflow-x: auto; margin: 40px 0; -webkit-overflow-scrolling: touch; width: 100%; }
-table { width: 100%; min-width: 100%; border-collapse: collapse; font-size: 1.1rem; }
+.table-container { overflow-x: auto; margin: 40px 0; -webkit-overflow-scrolling: touch; width: 100%; max-width: 900px; }
+table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 1.1rem; }
 th, td { padding: 14px; border: 1px solid #ddd; text-align: center; }
 th { background-color: #dc143c; color: white; white-space: nowrap; }
 tr:nth-child(even) { background-color: #f9f9f9; }
@@ -67,7 +67,7 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
 .report-card embed { width: 100%; height: 600px; border: none; border-radius: 8px; }
 .report-card p { margin-top: 20px; text-align: center; }
 
-/* MOBILE FIXES – centred, no overflow, smaller cover */
+/* MOBILE FIXES – full-width header, cover, centered content */
 @media (max-width: 768px) {
   .menu-toggle { display: block; }
   nav ul { display: none; flex-direction: column; background: #dc143c; padding: 20px; }
@@ -82,21 +82,20 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   .btn { padding: 12px 30px; font-size: 1rem; }
   .today-match { font-size: 1.4rem; }
   .programme-cover { 
-    max-width: 300px;   /* reduced by ~2/3 from 500px */
+    max-width: 320px; 
     width: 90%; 
     height: auto; 
-    margin: 40px auto; 
-    border: 6px solid #dc143c; 
-    border-radius: 12px; 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
+    margin: 20px 0; 
+    border: none; 
+    border-radius: 0; 
+    box-shadow: none; 
   }
   .sponsors-list { gap: 30px; }
   .sponsor-logo-footer { height: 60px; }
   .sponsors-footer::after { width: 30px; }
   .report-card embed { height: 500px; }
-  .content-wrapper { padding: 0 15px; }
-  .table-container { width: 100%; overflow-x: auto; }
-  table { min-width: 100%; font-size: 0.9rem; }
+  .content-wrapper { padding: 0 10px; }
+  .table-container { width: 100%; max-width: 100%; }
 }
 
 /* TABLET FIXES */
@@ -110,36 +109,4 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   table { font-size: 1.1rem; }
   .sponsors-list { gap: 35px; }
   .sponsor-logo-footer { height: 70px; }
-
-/* Button further up – small gap from header, larger gap below */
-.upper-btn {
-  margin: 15px auto 100px; /* 15px from header, 100px gap to heading */
-  display: block;
-  max-width: 320px;
-  text-align: center;
-}
-
-/* Mobile – tighter but still clear separation */
-@media (max-width: 768px) {
-  .upper-btn {
-    margin: 12px auto 80px; /* Very close to header on mobile */
-    padding: 12px 28px;
-    font-size: 1rem;
-    max-width: 280px;
-  }
-}
-
-/* Reduce hero top padding to move button closer to header */
-.hero {
-  padding-top: 20px; /* Small gap from header (was 140px) */
-  padding-bottom: 140px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* Mobile – keep small gap */
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 15px; /* Even smaller gap on mobile */
-  }
 }
