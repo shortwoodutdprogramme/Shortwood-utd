@@ -32,6 +32,37 @@ section { padding: 100px 20px; text-align: center; display: flex; flex-direction
 .bg-crimson .btn { background-color: white; color: #dc143c; }
 .bg-crimson .btn:hover { background-color: #f0f0f0; }
 
+.programme-section {
+  background-color: #b30000; /* festive red */
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+.programme-section h3,
+.programme-section p {
+  color: white;
+}
+
+.programme-section a {
+  text-decoration: none;
+}
+
+.programme-section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.programme-section img:hover {
+  transform: scale(1.02);
+}
+
+
 .today-match { font-size: 1.8rem; color: #dc143c; font-weight: bold; margin-bottom: 30px; }
 .programme-cover { max-width: 500px; margin: 40px auto; border: 6px solid #dc143c; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
 
@@ -53,6 +84,10 @@ tr:nth-child(even) { background-color: #f9f9f9; }
 .archive-button a { color: white; font-size: 1rem; }
 
 footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.9rem; }
+
+
+
+
 
 /* Static report cards (no carousel) */
 .report-card { 
