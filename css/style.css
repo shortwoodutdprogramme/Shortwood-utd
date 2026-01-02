@@ -48,22 +48,23 @@ body {
 }
 
 /* About Section */
+/* About Section */
 .about-section {
-  background: #eee;
-  padding: 60px 20px;
+  background: crimson;          /* tie into halo */
+  padding: 50px 20px;
   text-align: center;
+  color: white;                 /* white text */
 }
 
 .about-section h2 {
-  color: crimson;
-  font-size: 2em;
-  margin-bottom: 25px;
+  font-size: 1.4em;             /* no bigger than halo links */
+  margin-bottom: 20px;
 }
 
 .about-section p {
   max-width: 900px;
-  margin: 0 auto 20px auto;
-  font-size: 1.1em;
+  margin: 0 auto 15px auto;
+  font-size: 1.2em;             /* matches halo nav link size */
   line-height: 1.6;
 }
 
