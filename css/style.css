@@ -1,3 +1,10 @@
+/* Layout container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* Reset */
 body {
   font-family: Arial, sans-serif;
@@ -5,6 +12,7 @@ body {
   padding: 0;
   background: #f9f9f9;
   color: #333;
+  font-size: 18px;
 }
 
 /* Halo Header */
@@ -14,39 +22,39 @@ body {
   text-align: center;
 }
 
-.halo-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .club-badge {
-  height: 80px;
-  margin-bottom: 15px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 
 .halo-nav {
   display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .halo-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .halo-nav a:hover {
   text-decoration: underline;
 }
+
 /* Match Intro */
 .match-intro {
-  text-align: center;
-  padding: 30px 20px;
   background: #eee;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.match-intro h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 /* Programme Section */
@@ -56,40 +64,29 @@ body {
 }
 
 .programme-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  color: white;
   text-align: center;
-}
-
-.programme-section h3,
-.programme-section p {
+  padding: 50px 20px;
   color: white;
 }
 
 .programme-cover {
   max-width: 100%;
   height: auto;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 /* Reports */
 .reports-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
+  padding: 40px 0;
 }
 
 .report {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Fixtures */
 .fixtures-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
+  padding: 40px 0;
 }
 
 .fixtures {
@@ -99,31 +96,34 @@ body {
 
 .fixtures th, .fixtures td {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
+  font-size: 1em;
 }
 
 .fixtures th {
   background-color: crimson;
   color: white;
+  font-size: 1.1em;
 }
 
 /* Sponsors */
 .sponsor-section {
-  text-align: center;
-  padding: 30px;
   background: #eee;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .sponsor-logos img {
-  max-height: 80px;
-  margin: 10px;
+  max-height: 100px;
+  margin: 15px;
 }
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 20px;
   background: crimson;
   color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1em;
 }
