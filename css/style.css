@@ -17,7 +17,7 @@ nav a:hover { opacity: 0.8; }
 
 .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center; }
 
-.hero { background-color: #ffffff; color: #000000; text-align: center; padding: 20px 20px 140px; }
+.hero { background-color: #ffffff; color: #000000; text-align: center; padding: 20px 20px 140px 20px; }
 .hero h1 { font-size: 3.5rem; margin-bottom: 20px; color: #dc143c; }
 .hero p { font-size: 1.5rem; max-width: 900px; margin: 0 auto 40px; color: #000000; }
 .btn { display: inline-block; background-color: #dc143c; color: white; padding: 14px 36px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; }
@@ -109,24 +109,6 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   table { font-size: 1.1rem; }
   .sponsors-list { gap: 35px; }
   .sponsor-logo-footer { height: 70px; }
-}
-
-/* Button further up – small gap from header, larger gap below */
-.upper-btn {
-  margin: 15px auto 100px; /* 15px from header, 100px gap to heading */
-  display: block;
-  max-width: 320px;
-  text-align: center;
-}
-
-/* Mobile – tighter but still clear separation */
-@media (max-width: 768px) {
-  .upper-btn {
-    margin: 12px auto 80px; /* Very close to header on mobile */
-    padding: 12px 28px;
-    font-size: 1rem;
-    max-width: 280px;
-  }
 }
 
 /* Reduce hero top padding to move button closer to header */
