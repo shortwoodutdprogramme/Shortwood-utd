@@ -33,15 +33,35 @@ section { padding: 100px 20px; text-align: center; display: flex; flex-direction
 .bg-crimson .btn:hover { background-color: #f0f0f0; }
 
 .programme-section {
-  background-color: #b30000; /* festive red */
+.programme-fullwidth {
+  width: 100%;
+  background-color: crimson; /* site red */
+}
+
+.programme-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
   color: white;
-  padding: 30px;
   text-align: center;
-  border-radius: 10px;
-  margin: 40px 0;
 }
 
 .programme-section h3,
+.programme-section p {
+  color: white;
+}
+
+.programme-section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.programme-section img:hover {
+  transform: scale(1.02);
+}.programme-section h3,
 .programme-section p {
   color: white;
 }
