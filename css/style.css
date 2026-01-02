@@ -165,3 +165,36 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   .sponsors-list { gap: 35px; }
   .sponsor-logo-footer { height: 70px; }
 }
+/* Full-width crimson background */
+.programme-fullwidth {
+  width: 100%;
+  background-color: crimson; /* site red */
+}
+
+/* Centered content inside the crimson band */
+.programme-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+/* White text for headings and paragraph */
+.programme-section h3,
+.programme-section p {
+  color: white;
+}
+
+/* Programme cover image styling */
+.programme-cover {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.programme-cover:hover {
+  transform: scale(1.02); /* subtle zoom on hover */
+}
