@@ -47,6 +47,26 @@ body {
   text-decoration: underline;
 }
 
+/* About Section */
+.about-section {
+  background: #eee;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: crimson;
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
 /* Match Intro */
 .match-intro {
   background: #eee;
