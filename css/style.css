@@ -1,5 +1,3 @@
-}
-
 /* Layout container */
 .container {
   max-width: 1200px;
@@ -12,20 +10,19 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #333;
   font-size: 18px;
 }
 
-/* Halo Header */
+/* Halo Header (crimson) */
 .halo-header {
   background-color: crimson;
+  color: white;
   padding: 30px 0;
   text-align: center;
 }
 
 .club-badge {
-  height: 133px;
+  height: 133px; /* one-third bigger */
   margin-bottom: 20px;
 }
 
@@ -40,56 +37,53 @@ body {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .halo-nav a:hover {
   text-decoration: underline;
 }
 
-/* About Section */
-/* About Section */
+/* About Section (white) */
 .about-section {
-  background: crimson;          /* tie into halo */
-  padding: 50px 20px;
+  background: white;
+  color: #333;
+  padding: 60px 20px;
   text-align: center;
-  color: white;                 /* white text */
 }
 
 .about-section h2 {
-  font-size: 1.4em;             /* no bigger than halo links */
-  margin-bottom: 20px;
+  color: crimson;
+  font-size: 1.4em;
+  margin-bottom: 25px;
 }
 
 .about-section p {
   max-width: 900px;
-  margin: 0 auto 15px auto;
-  font-size: 1.2em;             /* matches halo nav link size */
+  margin: 0 auto 20px auto;
+  font-size: 1.2em;
   line-height: 1.6;
 }
 
-/* Match Intro */
+/* Match Intro (crimson) */
 .match-intro {
-  background: #eee;
-  padding: 40px 0;
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .match-intro h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 1.4em;
+  margin-bottom: 15px;
 }
 
-/* Programme Section */
-.programme-fullwidth {
-  width: 100%;
-  background-color: crimson;
-}
-
+/* Programme Section (white) */
 .programme-section {
+  background: white;
+  color: #333;
   text-align: center;
   padding: 50px 20px;
-  color: white;
 }
 
 .programme-cover {
@@ -98,18 +92,24 @@ body {
   margin-top: 20px;
 }
 
-/* Reports */
+/* Reports Section (crimson) */
 .reports-section {
-  padding: 40px 0;
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .report {
   margin-bottom: 30px;
 }
 
-/* Fixtures */
+/* Fixtures Section (white) */
 .fixtures-section {
-  padding: 40px 0;
+  background: white;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .fixtures {
@@ -126,27 +126,4 @@ body {
 
 .fixtures th {
   background-color: crimson;
-  color: white;
-  font-size: 1.1em;
-}
-
-/* Sponsors */
-.sponsor-section {
-  background: #eee;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.sponsor-logos img {
-  max-height: 100px;
-  margin: 15px;
-}
-
-/* Footer */
-.footer {
-  background: crimson;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 1em;
-}
+ 
