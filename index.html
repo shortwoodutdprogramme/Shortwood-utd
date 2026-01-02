@@ -31,18 +31,22 @@
   <!-- Reports Section -->
   <section class="reports-section">
     <h3>Match Reports</h3>
-    <article class="report">
-      <h4>Report 1</h4>
-      <p>Details of the first report...</p>
-    </article>
-    <article class="report">
-      <h4>Report 2</h4>
-      <p>Details of the second report...</p>
-    </article>
-    <article class="report">
-      <h4>Report 3</h4>
-      <p>Details of the third report...</p>
-    </article>
+    <div class="report-carousel">
+      <button class="report-prev">&#10094;</button>
+      <div class="report-slide active">
+        <h4>Report 1</h4>
+        <p>Details of the first report...</p>
+      </div>
+      <div class="report-slide">
+        <h4>Report 2</h4>
+        <p>Details of the second report...</p>
+      </div>
+      <div class="report-slide">
+        <h4>Report 3</h4>
+        <p>Details of the third report...</p>
+      </div>
+      <button class="report-next">&#10095;</button>
+    </div>
   </section>
 
   <!-- Fixtures Section -->
@@ -79,9 +83,11 @@
   <!-- Sponsors Section -->
   <section class="sponsor-section">
     <h3>Our Sponsors</h3>
-    <img src="images/sponsors/thruyes-logo.png" alt="Thruyes Logo" class="sponsor-logo">
-    <img src="images/sponsors/uhlsport-logo.png" alt="Uhlsport Logo" class="sponsor-logo">
-    <img src="images/sponsors/pme-logo.png" alt="PME Logo" class="sponsor-logo">
+    <div class="sponsor-carousel">
+      <img src="images/sponsors/thruyes-logo.png" alt="Thruyes Logo" class="sponsor-logo active">
+      <img src="images/sponsors/uhlsport-logo.png" alt="Uhlsport Logo" class="sponsor-logo">
+      <img src="images/sponsors/pme-logo.png" alt="PME Logo" class="sponsor-logo">
+    </div>
   </section>
 
   <!-- Footer -->
@@ -90,5 +96,6 @@
     <p>Follow us on social media for updates</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

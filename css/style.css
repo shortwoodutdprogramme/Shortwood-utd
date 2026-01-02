@@ -21,11 +21,20 @@ body {
   color: white; text-align: center;
 }
 .programme-section h3, .programme-section p { color: white; }
-.programme-cover { max-width: 100%; height: auto; margin-top: 15px; }
+.programme-cover { max-width: 100%; transition: transform 0.2s ease; cursor: pointer; }
+.programme-cover:hover { transform: scale(1.02); }
 
-/* Reports */
-.reports-section { max-width: 1200px; margin: 40px auto; padding: 20px; }
-.report { margin-bottom: 20px; }
+/* Reports Carousel */
+.reports-section { max-width: 1200px; margin: 40px auto; text-align: center; }
+.report-carousel { position: relative; }
+.report-slide { display: none; }
+.report-slide.active { display: block; }
+.report-prev, .report-next {
+  cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);
+  background: crimson; color: white; border: none; padding: 10px; font-size: 18px;
+}
+.report-prev { left: 0; }
+.report-next { right: 0; }
 
 /* Fixtures */
 .fixtures-section { max-width: 1200px; margin: 40px auto; padding: 20px; }
@@ -33,9 +42,11 @@ body {
 .fixtures th, .fixtures td { border: 1px solid #ddd; padding: 10px; text-align: center; }
 .fixtures th { background-color: crimson; color: white; }
 
-/* Sponsors */
+/* Sponsors Carousel */
 .sponsor-section { text-align: center; padding: 30px; background: #eee; }
-.sponsor-logo { max-height: 100px; margin: 10px; }
+.sponsor-carousel { position: relative; height: 150px; }
+.sponsor-logo { display: none; max-height: 100px; margin: auto; }
+.sponsor-logo.active { display: block; }
 
 /* Footer */
 .footer { text-align: center; padding: 20px; background: crimson; color: white; }
