@@ -1,3 +1,4 @@
+/* Reset */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,14 +7,6 @@ body {
   color: #333;
 }
 
-/* Header */
-.header {
-  text-align: center;
-  padding: 20px;
-  background: #eee;
-}
-.header h1 { color: crimson; }
-
 /* Halo Header */
 .halo-header {
   display: flex;
@@ -21,7 +14,7 @@ body {
   align-items: center;
   background-color: crimson;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   flex-wrap: wrap;
 }
 
@@ -36,43 +29,109 @@ body {
 }
 
 .club-name {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
+  white-space: nowrap;
+}
+
+.halo-nav {
+  display: flex;
+  gap: 20px;
 }
 
 .halo-nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
   font-weight: bold;
+  font-size: 1em;
 }
 
 .halo-nav a:hover {
   text-decoration: underline;
 }
 
-/* Programme Section */
-.programme-fullwidth { width: 100%; background-color: crimson; }
-.programme-section {
-  max-width: 1200px; margin: 0 auto; padding: 40px 20px;
-  color: white; text-align: center;
+/* Match Intro */
+.match-intro {
+  text-align: center;
+  padding: 30px 20px;
+  background: #eee;
 }
-.programme-section h3, .programme-section p { color: white; }
-.programme-cover { max-width: 100%; height: auto; margin-top: 15px; }
+
+/* Programme Section */
+.programme-fullwidth {
+  width: 100%;
+  background-color: crimson;
+}
+
+.programme-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.programme-section h3,
+.programme-section p {
+  color: white;
+}
+
+.programme-cover {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
 
 /* Reports */
-.reports-section { max-width: 1200px; margin: 40px auto; padding: 20px; }
-.report { margin-bottom: 20px; }
+.reports-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.report {
+  margin-bottom: 20px;
+}
 
 /* Fixtures */
-.fixtures-section { max-width: 1200px; margin: 40px auto; padding: 20px; }
-.fixtures { width: 100%; border-collapse: collapse; }
-.fixtures th, .fixtures td { border: 1px solid #ddd; padding: 10px; text-align: center; }
-.fixtures th { background-color: crimson; color: white; }
+.fixtures-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.fixtures {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fixtures th, .fixtures td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.fixtures th {
+  background-color: crimson;
+  color: white;
+}
 
 /* Sponsors */
-.sponsor-section { text-align: center; padding: 30px; background: #eee; }
-.sponsor-logo { max-height: 100px; margin: 10px; }
+.sponsor-section {
+  text-align: center;
+  padding: 30px;
+  background: #eee;
+}
+
+.sponsor-logos img {
+  max-height: 80px;
+  margin: 10px;
+}
 
 /* Footer */
-.footer { text-align: center; padding: 20px; background: crimson; color: white; }
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: crimson;
+  color: white;
+}
