@@ -14,6 +14,43 @@ body {
 }
 .header h1 { color: crimson; }
 
+/* Halo Header */
+.halo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: crimson;
+  color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.halo-left {
+  display: flex;
+  align-items: center;
+}
+
+.club-badge {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.club-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.halo-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.halo-nav a:hover {
+  text-decoration: underline;
+}
+
 /* Programme Section */
 .programme-fullwidth { width: 100%; background-color: crimson; }
 .programme-section {
