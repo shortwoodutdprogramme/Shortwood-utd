@@ -82,7 +82,7 @@ footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 
   .btn { padding: 12px 30px; font-size: 1rem; }
   .today-match { font-size: 1.4rem; }
   .programme-cover { 
-    max-width: 320px; 
+    max-width: 300px; 
     width: 90%; 
     height: auto; 
     margin: 20px 0; 
