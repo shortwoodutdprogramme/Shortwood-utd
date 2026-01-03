@@ -12,7 +12,7 @@ body {
   padding: 0 20px;
 }
 
-/* Halo Header (crimson) */
+/* Halo Header */
 .halo-header {
   background-color: crimson;
   color: white;
@@ -43,41 +43,7 @@ body {
   text-decoration: underline;
 }
 
-/* About Section (white) */
-.about-section {
-  background: white;
-  color: #333;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.about-section h2 {
-  color: crimson;
-  font-size: 1.4em;
-  margin-bottom: 25px;
-}
-
-.about-section p {
-  max-width: 900px;
-  margin: 0 auto 20px auto;
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
-/* Match Intro (crimson) */
-.match-intro {
-  background: crimson;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.match-intro h2 {
-  font-size: 1.4em;
-  margin-bottom: 15px;
-}
-
-/* Reports Section (crimson, swipe slider with styled previews) */
+/* Reports Section */
 .reports-section {
   background: crimson;
   color: white;
@@ -99,8 +65,6 @@ body {
   min-width: 100%;
   box-sizing: border-box;
   padding: 20px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 8px;
   display: none;
 }
 
@@ -121,103 +85,57 @@ body {
   z-index: 1;
 }
 
-.slider-btn.left {
-  left: 10px;
-}
+.slider-btn.left { left: 10px; }
+.slider-btn.right { right: 10px; }
+.slider-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
-.slider-btn.right {
-  right: 10px;
-}
-
-.slider-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.slide h4 {
-  margin-top: 0;
-}
-
-.slide a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.slide a:hover {
-  text-decoration: underline;
-}
-
-/* Styled report preview block */
-.report-preview {
-  margin: 20px 0;
-  padding: 15px;
-  background: #fff;
-  color: #333;
-  border-left: 5px solid crimson;
-  border-radius: 5px;
+/* Newspaper clipping style */
+.newspaper-clipping {
+  background: #fdf6e3;
+  color: #222;
+  padding: 25px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Georgia', serif;
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 8px solid crimson;
   text-align: left;
 }
 
-.report-preview h5 {
-  margin-top: 0;
-  color: crimson;
+.newspaper-clipping h2 {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+.newspaper-clipping .subhead {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.clipping-body p {
+  margin: 10px 0;
+  line-height: 1.6;
   font-size: 1.1em;
 }
 
-.report-preview p {
-  margin: 10px 0;
-  line-height: 1.5;
+.read-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: crimson;
+  text-decoration: none;
 }
 
-/* Fixtures Section (white) */
-.fixtures-section {
-  background: white;
-  color: #333;
-  padding: 40px 20px;
-  text-align: center;
+.read-link:hover {
+  text-decoration: underline;
 }
 
-.fixtures {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.fixtures th, .fixtures td {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  font-size: 1em;
-}
-
-.fixtures th {
-  background-color: crimson;
-  color: white;
-}
-
-/* Sponsors Section (crimson) */
-.sponsor-section {
-  background: crimson;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.sponsor-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.sponsor-logos img {
-  max-height: 100px;
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Footer (white) */
+/* Footer */
 .footer {
   background: white;
   color: #333;
