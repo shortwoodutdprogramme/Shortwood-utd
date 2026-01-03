@@ -62,7 +62,7 @@ h1, h2, h3 {
 ------------------------------ */
 .halo-header {
   width: 100%;
-  background: var(--wood-crimson); /* unified red */
+  background: var(--wood-crimson);
   color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
@@ -137,10 +137,6 @@ h1, h2, h3 {
   align-items: center;
   overflow-y: auto;
   z-index: 200;
-
-  border-right: none !important;
-  box-shadow: none !important;
-  outline: none !important;
 }
 
 .sponsor-sidebar img {
@@ -223,13 +219,10 @@ h1, h2, h3 {
   border: 1px solid #ccc;
   box-shadow: 0 0 8px rgba(0,0,0,0.15);
   font-family: Georgia, 'Times New Roman', serif;
-
   max-width: 520px;
   margin: 0 auto;
-
   border-left: 6px solid crimson;
   text-align: left;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,23 +251,48 @@ table.fixtures th {
 }
 
 /* ------------------------------
-   FOOTER (UPDATED CONTACT + ICONS)
+   FOOTER (CONTACT + ICONS + WATERMARK)
 ------------------------------ */
 .footer {
   background: var(--wood-crimson);
   color: #fff;
-  padding: 30px 0;
+  padding: 40px 0 30px;
   text-align: center;
+  border-top: 4px solid #600000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Watermark */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translate(-50%, -50%);
+  background-image: url('images/sufc_badge.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 .footer-container {
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-container p {
   margin: 8px 0;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .footer-container a {
@@ -289,16 +307,16 @@ table.fixtures th {
 
 /* Social icons */
 .social-icons {
-  margin: 15px 0 5px;
+  margin: 18px 0 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;          /* tighter spacing */
-  flex-wrap: nowrap;  /* force single row */
+  gap: 12px;
+  flex-wrap: nowrap;
 }
 
 .social-icons .icon {
-  width: 16px;        /* smaller icon size */
+  width: 16px;
   height: 16px;
   display: inline-flex;
   color: #fff;
@@ -312,6 +330,12 @@ table.fixtures th {
 .social-icons svg {
   width: 100%;
   height: 100%;
+}
+
+/* Archive link */
+.archive-footer-link {
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 /* ------------------------------
