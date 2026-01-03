@@ -58,4 +58,143 @@ body {
 }
 
 .about-section p {
-  max-width
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Match Intro (crimson) */
+.match-intro {
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.match-intro h2 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+/* Reports Section (crimson, swipe slider) */
+.reports-section {
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: crimson;
+  border: none;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+.report h4 {
+  margin-top: 0;
+}
+
+.report a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.report a:hover {
+  text-decoration: underline;
+}
+
+/* Fixtures Section (white) */
+.fixtures-section {
+  background: white;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.fixtures {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fixtures th, .fixtures td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.fixtures th {
+  background-color: crimson;
+  color: white;
+}
+
+/* Sponsors Section (crimson) */
+.sponsor-section {
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsor-logos img {
+  max-height: 100px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Footer (white) */
+.footer {
+  background: white;
+  color: #333;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 2px solid crimson;
+}
