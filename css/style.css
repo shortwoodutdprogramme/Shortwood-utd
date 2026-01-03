@@ -229,51 +229,38 @@ table.fixtures th {
 }
 
 /* ------------------------------------------------------------
-   7. FOOTER (CONTACT + ICONS + WATERMARK)
------------------------------------------------------------- */
-
-/* ------------------------------------------------------------
-   FOOTER (Aligned with main site content)
+   FOOTER
 ------------------------------------------------------------ */
 .footer {
   background: var(--wood-crimson);
   color: #fff;
   padding: 40px 0 30px;
   border-top: 4px solid var(--wood-dark);
-  position: relative;
-  overflow: hidden;
 }
 
-/* Footer content wrapper — matches .container layout */
-.footer-container {
-  max-width: 900px;      /* same width as main content */
-  margin: 0 auto;        /* center the block */
-  padding: 0 20px;       /* same side padding as .container */
-  text-align: left;      /* align with fixtures + match report */
-  position: relative;
-  z-index: 2;
+/* use .container’s width & padding; only style text */
+.footer .container {
+  text-align: left; /* same feel as fixtures area */
 }
 
-/* Footer text blocks */
-.footer-container p {
+.footer .container p {
   margin: 8px 0;
   line-height: 1.6;
   font-size: 0.95rem;
-  text-align: left;
 }
 
-/* Footer links */
-.footer-container a {
+/* links */
+.footer .container a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
 
-.footer-container a:hover {
+.footer .container a:hover {
   text-decoration: underline;
 }
 
-/* Social icons — aligned left to match text */
+/* social icons */
 .social-icons {
   margin: 18px 0 12px;
   display: flex;
@@ -299,11 +286,10 @@ table.fixtures th {
   height: 100%;
 }
 
-/* Archive link */
 .archive-footer-link {
   margin-top: 10px;
   font-size: 0.9rem;
-}}
+}
 
 /* ------------------------------------------------------------
    8. MOBILE RESPONSIVE
