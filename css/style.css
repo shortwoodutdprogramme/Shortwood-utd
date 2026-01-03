@@ -149,13 +149,12 @@ body.nav-open .menu-toggle span:nth-child(3) {
   width: 150px;
   height: 100vh;
   padding: 20px 10px;
-  background: #fff;
+  background: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
   z-index: 200;
-  border-right: 2px solid #ccc;
 }
 
 .sponsor-sidebar img {
