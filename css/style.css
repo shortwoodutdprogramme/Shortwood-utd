@@ -332,6 +332,52 @@ table.fixtures th {
   background: #eee;
   font-weight: bold;
 }
+/* ------------------------------
+   CONTACT SECTION
+------------------------------ */
+
+.contact-container {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.contact-container p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.contact-container strong {
+  color: var(--wood-crimson);
+}
+
+.contact-container a {
+  color: var(--wood-crimson);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-container a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons (text links for now) */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.social-icons a {
+  color: var(--wood-crimson);
+}
+
+
 
 /* ------------------------------
    FOOTER
