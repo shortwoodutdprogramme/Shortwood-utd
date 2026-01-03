@@ -1,27 +1,47 @@
-// Reports carousel
-const reportSlides = document.querySelectorAll('.report-slide');
-let reportIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const leftBtn = document.querySelector('.slider-btn.left');
+const rightBtn = document.querySelector('.slider-btn.right');
+let current = 0;
 
-document.querySelector('.report-prev').addEventListener('click', () => {
-  reportSlides[reportIndex].classList.remove('active');
-  reportIndex = (reportIndex - 1 + reportSlides.length) % reportSlides.length;
-  reportSlides[reportIndex].classList.add('active');
-});
-
-document.querySelector('.report-next').addEventListener('click', () => {
-  reportSlides[reportIndex].classList.remove('active');
-  reportIndex = (reportIndex + 1) % reportSlides.length;
-  reportSlides[reportIndex].classList.add('active');
-});
-
-// Sponsors auto-rotate
-const sponsorLogos = document.querySelectorAll('.sponsor-logo');
-let sponsorIndex = 0;
-
-function rotateSponsors() {
-  sponsorLogos[sponsorIndex].classList.remove('active');
-  sponsorIndex = (sponsorIndex + 1) % sponsorLogos.length;
-  sponsorLogos[sponsorIndex].classList.add('active');
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+  // Disable buttons at ends
+  leftBtn.disabled = (index === 0);
+  rightBtn.disabled = (index === slides.length - 1);
 }
 
-setInterval(rotateSponsors, 3000); // change every 3 seconds
+leftBtn.addEventListener('click', () => {
+  if (current > 0) {
+    current--;
+    showSlide(current);
+  }
+});
+
+rightBtn.addEventListener('click', () => {
+  if (current < slides.length - 1) {
+    current++;
+    showSlide(current);
+  }
+});
+
+// Swipe support for mobile
+let startX = 0;
+document.querySelector('.slider').addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+document.querySelector('.slider').addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if (endX < startX - 50 && current < slides.length - 1) {
+    current++;
+    showSlide(current);
+  }
+  if (endX > startX + 50 && current > 0) {
+    current--;
+    showSlide(current);
+  }
+});
+
+showSlide(current);
