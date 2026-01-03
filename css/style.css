@@ -17,14 +17,16 @@
 body {
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background: #ffffff;   /* ensure no dark background shows */
+  background: #ffffff;
   color: #111;
 }
 
-/* Main content offset to clear sponsor sidebar */
+/* ------------------------------
+   MAIN CONTENT
+------------------------------ */
 main {
   padding-bottom: 40px;
-  margin-left: 150px; /* FIX: match sidebar width to remove black line */
+  margin-left: 150px; /* matches sidebar width */
   background: #ffffff;
 }
 
@@ -35,7 +37,6 @@ main {
   text-align: center;
 }
 
-/* Section alternation */
 .section {
   padding: 30px 0;
 }
@@ -50,7 +51,6 @@ main {
   color: #111;
 }
 
-/* Headings */
 h1, h2, h3 {
   font-family: 'Oswald', 'Roboto', sans-serif;
   letter-spacing: 0.03em;
@@ -58,11 +58,11 @@ h1, h2, h3 {
 }
 
 /* ------------------------------
-   HALO HEADER
+   HEADER (HALO)
 ------------------------------ */
 .halo-header {
   width: 100%;
-  background: var(--wood-crimson);
+  background: var(--wood-crimson); /* unified red */
   color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
@@ -71,7 +71,7 @@ h1, h2, h3 {
   max-width: 900px;
   margin: 0 auto;
   padding: 12px 20px 16px;
-  padding-left: 150px; /* match sidebar width */
+  padding-left: 150px; /* match sidebar */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,11 +79,10 @@ h1, h2, h3 {
 }
 
 .club-badge {
-  height: 250px;
+  height: 120px;
   margin-bottom: 10px;
 }
 
-/* Mobile menu button */
 .menu-toggle {
   position: absolute;
   right: 20px;
@@ -104,7 +103,6 @@ h1, h2, h3 {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Halo navigation */
 .halo-nav {
   display: flex;
   gap: 28px;
@@ -123,25 +121,8 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Mobile menu open state */
-body.nav-open .halo-nav {
-  display: flex;
-}
-
-body.nav-open .menu-toggle span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-body.nav-open .menu-toggle span:nth-child(2) {
-  opacity: 0;
-}
-
-body.nav-open .menu-toggle span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
 /* ------------------------------
-   SPONSOR SIDEBAR (FIXED LEFT)
+   SPONSOR SIDEBAR
 ------------------------------ */
 .sponsor-sidebar {
   position: fixed;
@@ -157,7 +138,6 @@ body.nav-open .menu-toggle span:nth-child(3) {
   overflow-y: auto;
   z-index: 200;
 
-  /* FIX: ensure sidebar draws no line */
   border-right: none !important;
   box-shadow: none !important;
   outline: none !important;
@@ -175,7 +155,7 @@ body.nav-open .menu-toggle span:nth-child(3) {
 }
 
 /* ------------------------------
-   REPORTS SECTION & SLIDER
+   REPORTS / SLIDER
 ------------------------------ */
 .reports-section {
   padding-bottom: 40px;
@@ -189,42 +169,22 @@ body.nav-open .menu-toggle span:nth-child(3) {
   margin-bottom: 10px;
 }
 
-.reports-header h3 {
-  margin: 0;
-}
-
-.archive-link {
-  font-size: 0.85rem;
-}
-
-.archive-link a {
-  color: #555;
-  text-decoration: none;
-}
-
-.archive-link a:hover {
-  text-decoration: underline;
-}
-
 .slider-wrapper {
   position: relative;
   margin-top: 10px;
 }
 
-/* Outer viewport */
 .slider {
   overflow: hidden;
   width: 100%;
   min-height: 320px;
 }
 
-/* Horizontal track */
 .slider-track {
   display: flex;
   transition: transform 0.4s ease;
 }
 
-/* Individual slide */
 .slide {
   min-width: 100%;
   padding: 10px 0;
@@ -232,7 +192,6 @@ body.nav-open .menu-toggle span:nth-child(3) {
   justify-content: center;
 }
 
-/* Slider buttons */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -276,44 +235,9 @@ body.nav-open .menu-toggle span:nth-child(3) {
   justify-content: center;
 }
 
-.newspaper-clipping h2 {
-  font-size: 1.3em;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #111;
-}
-
-.newspaper-clipping .subhead {
-  font-style: italic;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-.clipping-body p {
-  margin: 6px 0;
-  line-height: 1.5;
-  font-size: 0.98em;
-}
-
-.read-link {
-  margin-top: 12px;
-  font-weight: bold;
-  color: var(--wood-crimson);
-  text-decoration: none;
-}
-
-.read-link:hover {
-  text-decoration: underline;
-}
-
 /* ------------------------------
    FIXTURES TABLE
 ------------------------------ */
-.fixtures-section h3 {
-  margin-bottom: 15px;
-}
-
 table.fixtures {
   width: 100%;
   border-collapse: collapse;
@@ -332,75 +256,60 @@ table.fixtures th {
   background: #eee;
   font-weight: bold;
 }
+
 /* ------------------------------
-   CONTACT SECTION
+   FOOTER (UPDATED CONTACT + ICONS)
 ------------------------------ */
-
-.contact-container {
+.footer {
+  background: var(--wood-crimson);
+  color: #fff;
+  padding: 30px 0;
   text-align: center;
-  max-width: 700px;
+}
+
+.footer-container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px 0;
 }
 
-.contact-container p {
-  margin: 10px 0;
-  line-height: 1.6;
-  font-size: 1rem;
+.footer-container p {
+  margin: 8px 0;
+  line-height: 1.5;
 }
 
-.contact-container strong {
-  color: var(--wood-crimson);
-}
-
-.contact-container a {
-  color: var(--wood-crimson);
+.footer-container a {
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
 
-.contact-container a:hover {
+.footer-container a:hover {
   text-decoration: underline;
 }
 
-/* Social icons (text links for now) */
+/* Social icons */
 .social-icons {
-  margin-top: 20px;
+  margin: 20px 0 10px;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  gap: 25px;
 }
 
-.social-icons a {
-  color: var(--wood-crimson);
-}
-
-
-
-/* ------------------------------
-   FOOTER
------------------------------- */
-.footer {
-  background: var(--wood-dark);
+.social-icons .icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
   color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  transition: opacity 0.2s ease;
 }
 
-.archive-footer-link {
-  margin-top: 10px;
-  font-size: 0.9rem;
+.social-icons .icon:hover {
+  opacity: 0.7;
 }
 
-.archive-footer-link a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.archive-footer-link a:hover {
-  text-decoration: underline;
+.social-icons svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* ------------------------------
@@ -415,8 +324,6 @@ table.fixtures th {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border-right: none !important;
-    box-shadow: none !important;
   }
 
   main {
