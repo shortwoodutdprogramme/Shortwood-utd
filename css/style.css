@@ -264,7 +264,7 @@ table.fixtures th {
 
 /* Footer content wrapper */
 .footer-container {
-  max-width: 600px !important;  /* ensures perfect centering */
+  max-width: 100% !important;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -275,15 +275,18 @@ table.fixtures th {
   z-index: 2;
 }
 
+
+
 /* Footer text blocks */
 .footer-container p {
-  width:100%;
-  max-width:600px;
-  margin:8px auto;
-  line-height:1.6;
-  font-size:0.95rem;
-  text-align:center;
+  width: 100%;
+  margin: 8px auto;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  text-align: center;
 }
+
+
 
 /* Footer links */
 .footer-container a {
