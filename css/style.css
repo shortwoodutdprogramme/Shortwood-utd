@@ -78,19 +78,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* Programme Section (white) */
-.programme-section {
-  background: white;
-  color: #333;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.programme-cover {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
 
 /* Reports Section (crimson) */
 .reports-section {
