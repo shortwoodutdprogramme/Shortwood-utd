@@ -77,7 +77,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Reports Section (crimson, swipe slider with previews) */
+/* Reports Section (crimson, swipe slider with styled previews) */
 .reports-section {
   background: crimson;
   color: white;
@@ -134,32 +134,40 @@ body {
   cursor: not-allowed;
 }
 
-.report h4 {
+.slide h4 {
   margin-top: 0;
 }
 
-.report a {
+.slide a {
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
 
-.report a:hover {
+.slide a:hover {
   text-decoration: underline;
 }
 
-/* Preview block inside reports */
-.preview {
-  margin: 15px 0;
-  font-size: 1em;
-  line-height: 1.4;
-  background: rgba(255,255,255,0.2);
-  padding: 10px;
+/* Styled report preview block */
+.report-preview {
+  margin: 20px 0;
+  padding: 15px;
+  background: #fff;
+  color: #333;
+  border-left: 5px solid crimson;
   border-radius: 5px;
+  text-align: left;
 }
 
-.preview strong {
-  color: #fff;
+.report-preview h5 {
+  margin-top: 0;
+  color: crimson;
+  font-size: 1.1em;
+}
+
+.report-preview p {
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 /* Fixtures Section (white) */
