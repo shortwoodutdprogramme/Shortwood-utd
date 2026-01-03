@@ -129,6 +129,11 @@ body {
   right: 10px;
 }
 
+.slider-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .report h4 {
   margin-top: 0;
 }

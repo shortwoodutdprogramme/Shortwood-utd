@@ -146,16 +146,23 @@
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === index);
       });
+      // Disable buttons at ends
+      leftBtn.disabled = (index === 0);
+      rightBtn.disabled = (index === slides.length - 1);
     }
 
     leftBtn.addEventListener('click', () => {
-      current = (current - 1 + slides.length) % slides.length;
-      showSlide(current);
+      if (current > 0) {
+        current--;
+        showSlide(current);
+      }
     });
 
     rightBtn.addEventListener('click', () => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
+      if (current < slides.length - 1) {
+        current++;
+        showSlide(current);
+      }
     });
 
     // Swipe support for mobile
@@ -166,8 +173,14 @@
 
     document.querySelector('.slider').addEventListener('touchend', e => {
       let endX = e.changedTouches[0].clientX;
-      if (endX < startX - 50) rightBtn.click();
-      if (endX > startX + 50) leftBtn.click();
+      if (endX < startX - 50 && current < slides.length - 1) {
+        current++;
+        showSlide(current);
+      }
+      if (endX > startX + 50 && current > 0) {
+        current--;
+        showSlide(current);
+      }
     });
 
     showSlide(current);
