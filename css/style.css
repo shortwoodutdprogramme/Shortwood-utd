@@ -25,6 +25,7 @@ body {
 main {
   padding-bottom: 40px;
   margin-left: 170px; /* matches sidebar width */
+  background: #fff;   /* FIX: removes black vertical line */
 }
 
 .container {
@@ -361,7 +362,6 @@ table.fixtures th {
     position: relative;
     width: 100%;
     height: auto;
-    border-right: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
