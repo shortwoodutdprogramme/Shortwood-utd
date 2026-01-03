@@ -284,17 +284,16 @@ table.fixtures th {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;   /* ensures all child elements are centred */
+  align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .footer-container p {
-  margin: 8px 0;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  width: 100%;
+  text-align: center;
 }
 
 .footer-container a {
