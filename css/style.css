@@ -43,6 +43,12 @@ body {
    2. LAYOUT STRUCTURE
 ------------------------------------------------------------ */
 
+main {
+  margin-left: 150px; /* space for sponsor sidebar */
+  padding-bottom: 40px;
+  background: #fff;
+}
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -86,6 +92,7 @@ h1, h2, h3 {
   max-width: 900px;
   margin: 0 auto;
   padding: 12px 20px 16px;
+  padding-left: 150px; /* aligns with sidebar */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,27 +144,33 @@ h1, h2, h3 {
 
 
 /* ------------------------------------------------------------
-   4. SPONSOR STRIP (HORIZONTAL)
+   4. SPONSOR SIDEBAR (LEFT, FIXED)
 ------------------------------------------------------------ */
 
 .sponsor-sidebar {
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  padding: 20px 10px;
   background: #f2f2f2;
-  padding: 12px 0;
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  border-bottom: 2px solid #ddd;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  z-index: 200;
 }
 
 .sponsor-sidebar img {
   width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 10px 0;
   background: #fff;
   padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  object-fit: contain;
 }
 
 
@@ -359,6 +372,19 @@ h1, h2, h3 {
 ------------------------------------------------------------ */
 
 @media (max-width: 768px) {
+
+  main {
+    margin-left: 0;
+  }
+
+  .sponsor-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .menu-toggle {
     display: block;
