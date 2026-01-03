@@ -17,15 +17,15 @@
 body {
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background: #ffffff;   /* LIGHT THEME */
+  background: #ffffff;   /* ensure no dark background shows */
   color: #111;
 }
 
 /* Main content offset to clear sponsor sidebar */
 main {
   padding-bottom: 40px;
-  margin-left: 170px; /* matches sidebar width */
-  background: #ffffff; /* FIX: removes black vertical line */
+  margin-left: 150px; /* FIX: match sidebar width to remove black line */
+  background: #ffffff;
 }
 
 .container {
@@ -41,8 +41,8 @@ main {
 }
 
 .section-red {
-  background: #f8dada;  /* softened red for light theme */
-  color: #111;
+  background: var(--wood-crimson);
+  color: #fff;
 }
 
 .section-white {
@@ -55,24 +55,23 @@ h1, h2, h3 {
   font-family: 'Oswald', 'Roboto', sans-serif;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #111;
 }
 
 /* ------------------------------
-   HALO HEADER (LIGHT THEME)
+   HALO HEADER
 ------------------------------ */
 .halo-header {
   width: 100%;
-  background: #f2f2f2; /* light grey */
-  color: #111;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background: var(--wood-dark);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 .halo-inner {
   max-width: 900px;
   margin: 0 auto;
   padding: 12px 20px 16px;
-  padding-left: 170px; /* aligns with sponsor sidebar */
+  padding-left: 150px; /* match sidebar width */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +100,7 @@ h1, h2, h3 {
   display: block;
   height: 3px;
   margin: 4px 0;
-  background: #111;
+  background: #fff;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -113,7 +112,7 @@ h1, h2, h3 {
 }
 
 .halo-nav a {
-  color: #800000; /* club crimson */
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   font-family: 'Oswald', sans-serif;
@@ -122,7 +121,6 @@ h1, h2, h3 {
 
 .halo-nav a:hover {
   text-decoration: underline;
-  color: #600000;
 }
 
 /* Mobile menu open state */
@@ -143,7 +141,7 @@ body.nav-open .menu-toggle span:nth-child(3) {
 }
 
 /* ------------------------------
-   SPONSOR SIDEBAR (LIGHT THEME)
+   SPONSOR SIDEBAR (FIXED LEFT)
 ------------------------------ */
 .sponsor-sidebar {
   position: fixed;
@@ -152,12 +150,17 @@ body.nav-open .menu-toggle span:nth-child(3) {
   width: 150px;
   height: 100vh;
   padding: 20px 10px;
-  background: #f2f2f2; /* light grey */
+  background: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
   z-index: 200;
+
+  /* FIX: ensure sidebar draws no line */
+  border-right: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .sponsor-sidebar img {
@@ -188,7 +191,6 @@ body.nav-open .menu-toggle span:nth-child(3) {
 
 .reports-header h3 {
   margin: 0;
-  color: #111;
 }
 
 .archive-link {
@@ -310,7 +312,6 @@ body.nav-open .menu-toggle span:nth-child(3) {
 ------------------------------ */
 .fixtures-section h3 {
   margin-bottom: 15px;
-  color: #111;
 }
 
 table.fixtures {
@@ -333,11 +334,11 @@ table.fixtures th {
 }
 
 /* ------------------------------
-   FOOTER (LIGHT THEME)
+   FOOTER
 ------------------------------ */
 .footer {
-  background: #f2f2f2;
-  color: #111;
+  background: var(--wood-dark);
+  color: #fff;
   padding: 20px 0;
   text-align: center;
 }
@@ -348,7 +349,7 @@ table.fixtures th {
 }
 
 .archive-footer-link a {
-  color: #111;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -361,7 +362,6 @@ table.fixtures th {
 ------------------------------ */
 @media (max-width: 768px) {
 
-  /* Sidebar collapses on mobile */
   .sponsor-sidebar {
     position: relative;
     width: 100%;
@@ -369,6 +369,8 @@ table.fixtures th {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    border-right: none !important;
+    box-shadow: none !important;
   }
 
   main {
