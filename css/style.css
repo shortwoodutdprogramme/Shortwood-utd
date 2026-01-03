@@ -282,11 +282,13 @@ table.fixtures th {
 
 .footer-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;   /* ensures all child elements are centred */
+  justify-content: center;
 }
 
 .footer-container p {
