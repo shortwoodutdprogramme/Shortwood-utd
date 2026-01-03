@@ -77,7 +77,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Reports Section (crimson, swipe slider) */
+/* Reports Section (crimson, swipe slider with previews) */
 .reports-section {
   background: crimson;
   color: white;
@@ -146,6 +146,20 @@ body {
 
 .report a:hover {
   text-decoration: underline;
+}
+
+/* Preview block inside reports */
+.preview {
+  margin: 15px 0;
+  font-size: 1em;
+  line-height: 1.4;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.preview strong {
+  color: #fff;
 }
 
 /* Fixtures Section (white) */
