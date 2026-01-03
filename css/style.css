@@ -1,152 +1,148 @@
-/* General layout */
+/* ------------------------------
+   GLOBAL
+------------------------------ */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  font-size: 18px;
-  background: #fff;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background: #800000;
+  color: #fff;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Bonus: consistent spacing between sections */
-section {
-  margin-bottom: 60px;
-}
-
-/* Halo Header */
-.halo-header {
-  background-color: crimson;
-  color: white;
-  padding: 30px 0;
+  padding: 20px;
   text-align: center;
 }
 
-.club-badge {
-  height: 133px;
-  margin-bottom: 20px;
+/* ------------------------------
+   HEADER
+------------------------------ */
+.halo-header {
+  background: #600000;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-.halo-nav {
+.halo-content {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.club-badge {
+  height: 70px;
 }
 
 .halo-nav a {
-  color: white;
+  color: #fff;
+  margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2em;
 }
 
 .halo-nav a:hover {
   text-decoration: underline;
 }
 
-/* About Section */
-.about-section {
-  background: white;
-  color: #333;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.about-section h2 {
-  color: crimson;
-  font-size: 1.6em;
-  margin-bottom: 25px;
-}
-
-.about-section p {
-  max-width: 900px;
-  margin: 0 auto 20px auto;
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
-/* Match Intro */
+/* ------------------------------
+   ABOUT + INTRO
+------------------------------ */
+.about-section,
 .match-intro {
-  background: crimson;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+  background: #700000;
+  padding: 30px 0;
+  margin-top: 20px;
 }
 
+.about-section h2,
 .match-intro h2 {
-  font-size: 1.4em;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-/* Reports Section */
-.reports-section {
-  background: crimson;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+/* ------------------------------
+   REPORTS SECTION
+------------------------------ */
+.reports-section h3 {
+  margin-bottom: 20px;
 }
 
+/* Slider wrapper */
 .slider-wrapper {
   position: relative;
+  margin-top: 20px;
+}
+
+/* Slider track */
+.slider {
+  display: flex;
+  min-height: 450px; /* FIXED HEIGHT so slides never jump */
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-.slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
+/* Individual slide */
 .slide {
   min-width: 100%;
+  display: none;
   box-sizing: border-box;
   padding: 20px;
-  display: none;
 }
 
 .slide.active {
   display: block;
 }
 
+/* Slider buttons */
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: white;
-  color: crimson;
+  background: #fff;
+  color: #800000;
   border: none;
-  font-size: 2em;
-  padding: 10px;
+  font-size: 2.2em;
+  padding: 5px 12px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 10;
+  border-radius: 4px;
 }
 
 .slider-btn.left { left: 10px; }
 .slider-btn.right { right: 10px; }
-.slider-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* Newspaper clipping style */
+.slider-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ------------------------------
+   NEWSPAPER CLIPPING (FIXED SIZE)
+------------------------------ */
 .newspaper-clipping {
-  background: #fdf6e3; /* off-white paper tone */
+  background: #fdf6e3;
   color: #222;
-  padding: 25px;
+  padding: 18px;
   border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
   font-family: Georgia, serif;
-  max-width: 700px;
+
+  width: 520px;      /* FIXED WIDTH */
+  height: 100%;      /* Fills slide height */
   margin: 0 auto;
-  border-left: 8px solid crimson;
+
+  border-left: 6px solid crimson;
   text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
 }
 
 .newspaper-clipping h2 {
-  font-size: 1.8em;
-  margin-bottom: 5px;
+  font-size: 1.4em;
+  margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #111;
@@ -154,21 +150,20 @@ section {
 
 .newspaper-clipping .subhead {
   font-style: italic;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #444;
 }
 
 .clipping-body p {
-  margin: 10px 0;
-  line-height: 1.6;
-  font-size: 1.1em;
+  margin: 6px 0;
+  line-height: 1.5;
+  font-size: 0.98em;
 }
 
 .read-link {
-  display: inline-block;
-  margin-top: 15px;
+  margin-top: 12px;
   font-weight: bold;
-  color: crimson;
+  color: #800000;
   text-decoration: none;
 }
 
@@ -176,68 +171,66 @@ section {
   text-decoration: underline;
 }
 
-/* Fixtures Section */
-.fixtures-section {
-  background: white;
-  color: #333;
-  padding: 40px 20px;
-  text-align: center;
-}
-
+/* ------------------------------
+   FIXTURES TABLE
+------------------------------ */
 .fixtures-section h3 {
-  margin-bottom: 20px;
-  font-size: 1.4em;
-  color: crimson;
+  margin-bottom: 15px;
 }
 
-.fixtures {
+table.fixtures {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;   /* centers the table */
   border-collapse: collapse;
-  font-size: 1em;
-  display: table;
+  background: #fff;
+  color: #000;
 }
 
-.fixtures th, .fixtures td {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
+table.fixtures th,
+table.fixtures td {
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
-.fixtures th {
-  background-color: crimson;
-  color: white;
+table.fixtures th {
+  background: #eee;
   font-weight: bold;
 }
 
-/* Sponsors Section */
+/* ------------------------------
+   SPONSORS
+------------------------------ */
 .sponsor-section {
-  background: crimson;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.sponsor-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centers logos */
-  gap: 20px;
+  margin-top: 40px;
 }
 
 .sponsor-logos img {
-  max-height: 100px;
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
+  height: 70px;
+  margin: 10px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 4px;
 }
 
-/* Footer */
+/* ------------------------------
+   FOOTER
+------------------------------ */
 .footer {
-  background: white;
-  color: #333;
-  text-align: center;
-  padding: 30px 20px;
-  border-top: 2px solid crimson;
+  background: #600000;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+@media (max-width: 600px) {
+  .newspaper-clipping {
+    width: 90vw;     /* Still fixed relative to screen */
+    max-width: 520px;
+    padding: 14px;
+  }
+
+  .slider {
+    min-height: 500px; /* Slightly taller for mobile */
+  }
 }
