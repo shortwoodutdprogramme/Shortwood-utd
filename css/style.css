@@ -232,6 +232,9 @@ table.fixtures th {
    7. FOOTER (CONTACT + ICONS + WATERMARK)
 ------------------------------------------------------------ */
 
+/* ------------------------------------------------------------
+   FOOTER (Aligned with main site content)
+------------------------------------------------------------ */
 .footer {
   background: var(--wood-crimson);
   color: #fff;
@@ -241,12 +244,12 @@ table.fixtures th {
   overflow: hidden;
 }
 
-/* Footer content wrapper */
+/* Footer content wrapper — matches .container layout */
 .footer-container {
-  max-width: 900px;     /* matches your site content width */
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;   /* CENTER ALL TEXT */
+  max-width: 900px;      /* same width as main content */
+  margin: 0 auto;        /* center the block */
+  padding: 0 20px;       /* same side padding as .container */
+  text-align: left;      /* align with fixtures + match report */
   position: relative;
   z-index: 2;
 }
@@ -256,7 +259,7 @@ table.fixtures th {
   margin: 8px 0;
   line-height: 1.6;
   font-size: 0.95rem;
-  text-align: center;   /* ensure paragraphs are centered */
+  text-align: left;
 }
 
 /* Footer links */
@@ -270,11 +273,11 @@ table.fixtures th {
   text-decoration: underline;
 }
 
-/* Social icons — centered */
+/* Social icons — aligned left to match text */
 .social-icons {
   margin: 18px 0 12px;
   display: flex;
-  justify-content: center;   /* CENTER ICONS */
+  justify-content: flex-start;
   align-items: center;
   gap: 12px;
 }
@@ -300,7 +303,7 @@ table.fixtures th {
 .archive-footer-link {
   margin-top: 10px;
   font-size: 0.9rem;
-}
+}}
 
 /* ------------------------------------------------------------
    8. MOBILE RESPONSIVE
