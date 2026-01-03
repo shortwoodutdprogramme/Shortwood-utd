@@ -231,9 +231,7 @@ table.fixtures th {
 /* ------------------------------------------------------------
    7. FOOTER (CONTACT + ICONS + WATERMARK)
 ------------------------------------------------------------ */
-/* ------------------------------------------------------------
-   FOOTER (Aligned with Content Column)
------------------------------------------------------------- */
+
 .footer {
   background: var(--wood-crimson);
   color: #fff;
@@ -262,7 +260,7 @@ table.fixtures th {
 .footer-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;        /* ← remove the 20px padding */
   position: relative;
   z-index: 2;
   text-align: left;
