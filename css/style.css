@@ -1,16 +1,15 @@
-/* Layout container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Reset */
+/* General layout */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Halo Header (crimson) */
@@ -78,7 +77,6 @@ body {
   margin-bottom: 15px;
 }
 
-
 /* Reports Section (crimson) */
 .reports-section {
   background: crimson;
@@ -113,4 +111,36 @@ body {
 
 .fixtures th {
   background-color: crimson;
- 
+  color: white;
+}
+
+/* Sponsors Section (crimson) */
+.sponsor-section {
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsor-logos img {
+  max-height: 100px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Footer (white) */
+.footer {
+  background: white;
+  color: #333;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 2px solid crimson;
+}
