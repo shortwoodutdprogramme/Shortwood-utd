@@ -244,10 +244,9 @@ table.fixtures th {
 }
 
 .footer .container p {
-  margin: 8px 0;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  text-align: left;
 }
+
 
 /* links */
 .footer .container a {
@@ -262,12 +261,13 @@ table.fixtures th {
 
 /* social icons */
 .social-icons {
-  margin: 18px 0 12px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 12px;
 }
+
+
 
 .social-icons .icon {
   width: 16px;
