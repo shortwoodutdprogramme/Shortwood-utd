@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
+  background: #fff;
+  color: #333;
 }
 
 .container {
@@ -41,6 +43,40 @@ body {
 
 .halo-nav a:hover {
   text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+  background: white;
+  color: #333;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: crimson;
+  font-size: 1.6em;
+  margin-bottom: 25px;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Match Intro */
+.match-intro {
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.match-intro h2 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
 }
 
 /* Reports Section */
@@ -91,12 +127,12 @@ body {
 
 /* Newspaper clipping style */
 .newspaper-clipping {
-  background: #fdf6e3;
+  background: #fdf6e3; /* off-white paper tone */
   color: #222;
   padding: 25px;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   max-width: 700px;
   margin: 0 auto;
   border-left: 8px solid crimson;
@@ -133,6 +169,53 @@ body {
 
 .read-link:hover {
   text-decoration: underline;
+}
+
+/* Fixtures Section */
+.fixtures-section {
+  background: white;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.fixtures {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fixtures th, .fixtures td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.fixtures th {
+  background-color: crimson;
+  color: white;
+}
+
+/* Sponsors Section */
+.sponsor-section {
+  background: crimson;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsor-logos img {
+  max-height: 100px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* Footer */
