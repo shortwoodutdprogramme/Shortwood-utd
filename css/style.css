@@ -289,15 +289,17 @@ table.fixtures th {
 
 /* Social icons */
 .social-icons {
-  margin: 20px 0 10px;
+  margin: 15px 0 5px;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  align-items: center;
+  gap: 12px;          /* tighter spacing */
+  flex-wrap: nowrap;  /* force single row */
 }
 
 .social-icons .icon {
-  width: 28px;
-  height: 28px;
+  width: 16px;        /* smaller icon size */
+  height: 16px;
   display: inline-flex;
   color: #fff;
   transition: opacity 0.2s ease;
