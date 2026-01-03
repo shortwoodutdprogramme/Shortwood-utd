@@ -132,7 +132,7 @@ section {
 
 /* Newspaper clipping style */
 .newspaper-clipping {
-  background: #fdf6e3;
+  background: #fdf6e3; /* off-white paper tone */
   color: #222;
   padding: 25px;
   border: 1px solid #ccc;
@@ -193,9 +193,10 @@ section {
 .fixtures {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto;   /* centers the table */
   border-collapse: collapse;
   font-size: 1em;
+  display: table;
 }
 
 .fixtures th, .fixtures td {
@@ -221,7 +222,7 @@ section {
 .sponsor-logos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* centers logos */
   gap: 20px;
 }
 
