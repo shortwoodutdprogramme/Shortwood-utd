@@ -241,22 +241,25 @@ table.fixtures th {
   overflow: hidden;
 }
 
+/* Footer content wrapper */
 .footer-container {
-  max-width: 900px;
+  max-width: 900px;     /* matches your site content width */
   margin: 0 auto;
-  padding: 0;        /* ← remove the 20px padding */
+  padding: 0 20px;
+  text-align: center;   /* CENTER ALL TEXT */
   position: relative;
   z-index: 2;
-  text-align: left;
 }
 
+/* Footer text blocks */
 .footer-container p {
   margin: 8px 0;
   line-height: 1.6;
   font-size: 0.95rem;
-  text-align: left;
+  text-align: center;   /* ensure paragraphs are centered */
 }
 
+/* Footer links */
 .footer-container a {
   color: #fff;
   text-decoration: none;
@@ -267,10 +270,11 @@ table.fixtures th {
   text-decoration: underline;
 }
 
+/* Social icons — centered */
 .social-icons {
   margin: 18px 0 12px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;   /* CENTER ICONS */
   align-items: center;
   gap: 12px;
 }
@@ -292,6 +296,7 @@ table.fixtures th {
   height: 100%;
 }
 
+/* Archive link */
 .archive-footer-link {
   margin-top: 10px;
   font-size: 0.9rem;
