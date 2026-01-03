@@ -243,7 +243,6 @@ table.fixtures th {
   overflow: hidden;
 }
 
-/* Watermark behind footer */
 .footer::before {
   content: "";
   position: absolute;
@@ -260,7 +259,6 @@ table.fixtures th {
   pointer-events: none;
 }
 
-/* Footer content wrapper (matches main content width) */
 .footer-container {
   max-width: 900px;
   margin: 0 auto;
@@ -270,14 +268,13 @@ table.fixtures th {
   text-align: left;
 }
 
-/* Footer text blocks */
 .footer-container p {
   margin: 8px 0;
   line-height: 1.6;
   font-size: 0.95rem;
+  text-align: left;
 }
 
-/* Footer links */
 .footer-container a {
   color: #fff;
   text-decoration: none;
@@ -288,7 +285,6 @@ table.fixtures th {
   text-decoration: underline;
 }
 
-/* Social icons row (left-aligned to match text) */
 .social-icons {
   margin: 18px 0 12px;
   display: flex;
@@ -314,16 +310,9 @@ table.fixtures th {
   height: 100%;
 }
 
-/* Archive link */
 .archive-footer-link {
   margin-top: 10px;
   font-size: 0.9rem;
-}
-
-/* Archive link */
-.archive-footer-link {
-  margin-top:10px;
-  font-size:0.9rem;
 }
 
 /* ------------------------------------------------------------
