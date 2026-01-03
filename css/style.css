@@ -1,53 +1,170 @@
+/* ============================================================
+   SHORTWOOD UNITED FC — MASTER STYLESHEET
+   Cleaned, organised, commented for long-term maintainability
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. GLOBAL THEME & RESET
+------------------------------------------------------------ */
+
 :root {
   --wood-crimson: #7d0014;
   --wood-dark: #3b0010;
+  --wood-cream: #fdf6e3;
+  --wood-text-dark: #222;
+
   --body-bg: #f4f4f4;
   --text-main: #111;
+
   --card-bg: #ffffff;
   --table-border: #ddd;
+
   --accent: #7d0014;
   --muted: #666;
+
   --link: #0044aa;
   --link-hover: #002b66;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   background: var(--body-bg);
   color: var(--text-main);
 }
 
-/* Shared layout container */
+
+/* ------------------------------------------------------------
+   2. LAYOUT STRUCTURE
+------------------------------------------------------------ */
+
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
-/* Header */
-.site-header {
-  background: #111;
+.section {
+  padding: 30px 0;
+}
+
+.section-red {
+  background: var(--wood-crimson);
   color: #fff;
 }
 
-.site-header h1 {
-  margin: 0 0 4px;
-  font-size: 1.6rem;
+.section-white {
+  background: #fff;
+  color: #111;
 }
 
-.site-header p {
-  margin: 0;
-  font-size: 0.95rem;
+h1, h2, h3 {
+  font-family: 'Oswald', 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-/* Hero */
+
+/* ------------------------------------------------------------
+   3. HEADER (HALO)
+------------------------------------------------------------ */
+
+.halo-header {
+  width: 100%;
+  background: var(--wood-crimson);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.halo-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.club-badge {
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 32px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  margin: 4px 0;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.halo-nav {
+  display: flex;
+  gap: 28px;
+  margin-top: 10px;
+}
+
+.halo-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+}
+
+.halo-nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------
+   4. SPONSOR STRIP (HORIZONTAL)
+------------------------------------------------------------ */
+
+.sponsor-sidebar {
+  width: 100%;
+  background: #f2f2f2;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #ddd;
+}
+
+.sponsor-sidebar img {
+  width: 120px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  object-fit: contain;
+}
+
+
+/* ------------------------------------------------------------
+   5. HERO SECTION
+------------------------------------------------------------ */
+
 .hero h2 {
   margin-top: 0;
   font-size: 1.3rem;
@@ -57,9 +174,13 @@ body {
   margin: 4px 0;
 }
 
-/* Match reports */
-.match-reports h2 {
-  margin: 10px 0 12px;
+
+/* ------------------------------------------------------------
+   6. MATCH REPORTS / SLIDER
+------------------------------------------------------------ */
+
+.reports-section {
+  padding-bottom: 40px;
 }
 
 .report-card {
@@ -67,6 +188,7 @@ body {
   border: 1px solid var(--table-border);
   border-radius: 4px;
   padding: 16px;
+  text-align: left;
 }
 
 .report-card h3 {
@@ -91,10 +213,71 @@ body {
   text-decoration: underline;
 }
 
-/* Fixtures */
-.fixtures h2 {
-  margin: 24px 0 12px;
+
+/* Slider */
+
+.slider-wrapper {
+  position: relative;
+  margin-top: 10px;
 }
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  min-height: 320px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: var(--wood-crimson);
+  border: none;
+  font-size: 2em;
+  padding: 5px 12px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.slider-btn.left { left: 10px; }
+.slider-btn.right { right: 10px; }
+.slider-btn:disabled { opacity: 0.3; cursor: default; }
+
+
+/* Newspaper clipping */
+
+.newspaper-clipping {
+  background: var(--wood-cream);
+  color: var(--wood-text-dark);
+  padding: 18px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  font-family: Georgia, 'Times New Roman', serif;
+  max-width: 520px;
+  margin: 0 auto;
+  border-left: 6px solid crimson;
+  text-align: left;
+}
+
+
+/* ------------------------------------------------------------
+   7. FIXTURES TABLE
+------------------------------------------------------------ */
 
 .fixtures-table {
   width: 100%;
@@ -116,7 +299,11 @@ body {
   font-weight: 600;
 }
 
-/* Footer */
+
+/* ------------------------------------------------------------
+   8. FOOTER
+------------------------------------------------------------ */
+
 .footer {
   background: var(--wood-crimson);
   color: #fff;
@@ -124,7 +311,6 @@ body {
   border-top: 4px solid var(--wood-dark);
 }
 
-/* Use same .container for alignment */
 .footer .container {
   text-align: left;
 }
@@ -135,18 +321,15 @@ body {
   font-size: 0.95rem;
 }
 
-/* Footer links */
 .footer .container a {
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .footer .container a:hover {
   text-decoration: underline;
 }
 
-/* Social icons */
 .social-icons {
   margin: 18px 0 12px;
   display: flex;
@@ -158,22 +341,52 @@ body {
 .social-icons .icon {
   width: 16px;
   height: 16px;
-  display: inline-flex;
-  color: #fff;
-  transition: opacity 0.2s ease;
 }
 
-.social-icons .icon:hover {
-  opacity: 0.7;
-}
-
-.social-icons svg {
+.social-icons .icon svg {
   width: 100%;
   height: 100%;
 }
 
-/* Archive link */
 .archive-footer-link {
   margin-top: 10px;
   font-size: 0.9rem;
+}
+
+
+/* ------------------------------------------------------------
+   9. MOBILE RESPONSIVE
+------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .halo-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    display: none;
+  }
+
+  .section {
+    padding: 24px 0;
+  }
+
+  .newspaper-clipping {
+    width: 90vw;
+    max-width: 520px;
+    padding: 14px;
+  }
+
+  .slider-btn {
+    font-size: 1.8em;
+  }
+
+  .fixtures-table {
+    font-size: 0.9rem;
+  }
 }
