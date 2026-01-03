@@ -21,9 +21,10 @@ body {
   color: #fff;
 }
 
+/* Main content offset to clear sponsor sidebar */
 main {
   padding-bottom: 40px;
-  margin-left: 170px; /* space for sponsor sidebar */
+  margin-left: 170px; /* matches sidebar width */
 }
 
 .container {
@@ -56,9 +57,10 @@ h1, h2, h3 {
 }
 
 /* ------------------------------
-   HALO HEADER
+   HALO HEADER (Option 2)
 ------------------------------ */
 .halo-header {
+  width: 100%;
   background: var(--wood-dark);
   color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
@@ -68,6 +70,7 @@ h1, h2, h3 {
   max-width: 900px;
   margin: 0 auto;
   padding: 12px 20px 16px;
+  padding-left: 170px; /* aligns with sponsor sidebar */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +78,7 @@ h1, h2, h3 {
 }
 
 .club-badge {
-  height: 120px; /* bigger badge */
+  height: 120px;
   margin-bottom: 10px;
 }
 
@@ -112,7 +115,7 @@ h1, h2, h3 {
   text-decoration: none;
   font-weight: 600;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.25rem; /* bigger links */
+  font-size: 1.25rem;
 }
 
 .halo-nav a:hover {
@@ -165,12 +168,6 @@ body.nav-open .menu-toggle span:nth-child(3) {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-
-main {
-  margin-left: 170px;
-}
-
-
 
 /* ------------------------------
    REPORTS SECTION & SLIDER
