@@ -67,22 +67,19 @@ body {
   margin-bottom: 20px;
 }
 
-/* Slider wrapper */
 .slider-wrapper {
   position: relative;
   margin-top: 20px;
 }
 
-/* Slider track */
 .slider {
   display: flex;
-  min-height: 450px; /* FIXED HEIGHT so slides never jump */
+  min-height: 450px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/* Individual slide */
 .slide {
   min-width: 100%;
   display: none;
@@ -118,7 +115,7 @@ body {
 }
 
 /* ------------------------------
-   NEWSPAPER CLIPPING (FIXED SIZE)
+   NEWSPAPER CLIPPING
 ------------------------------ */
 .newspaper-clipping {
   background: #fdf6e3;
@@ -128,8 +125,8 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,0.15);
   font-family: Georgia, serif;
 
-  width: 520px;      /* FIXED WIDTH */
-  height: 100%;      /* Fills slide height */
+  width: 520px;
+  height: 100%;
   margin: 0 auto;
 
   border-left: 6px solid crimson;
@@ -137,7 +134,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
+  justify-content: center;
 }
 
 .newspaper-clipping h2 {
@@ -225,12 +222,12 @@ table.fixtures th {
 ------------------------------ */
 @media (max-width: 600px) {
   .newspaper-clipping {
-    width: 90vw;     /* Still fixed relative to screen */
+    width: 90vw;
     max-width: 520px;
     padding: 14px;
   }
 
   .slider {
-    min-height: 500px; /* Slightly taller for mobile */
+    min-height: 500px;
   }
 }
