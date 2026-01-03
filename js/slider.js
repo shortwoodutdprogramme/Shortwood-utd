@@ -1,18 +1,17 @@
-// Slider logic with fade transitions + swipe
 document.addEventListener('DOMContentLoaded', () => {
+  // Slider logic: horizontal translateX with swipe
   const slider = document.getElementById('report-slider');
-  const slides = Array.from(slider.querySelectorAll('.slide'));
+  const track = slider.querySelector('.slider-track');
+  const slides = Array.from(track.querySelectorAll('.slide'));
   const prevBtn = document.querySelector('.slider-btn.left');
   const nextBtn = document.querySelector('.slider-btn.right');
 
   let currentIndex = 0;
 
-  function updateSlides() {
-    slides.forEach((slide, index) => {
-      slide.classList.toggle('active', index === currentIndex);
-    });
+  function updateSlider() {
+    const offset = -currentIndex * 100;
+    track.style.transform = `translateX(${offset}%)`;
 
-    // Optional: disable buttons at ends
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === slides.length - 1;
   }
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function goTo(index) {
     if (index < 0 || index >= slides.length) return;
     currentIndex = index;
-    updateSlides();
+    updateSlider();
   }
 
   prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
@@ -40,19 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const endX = e.changedTouches[0].clientX;
     const deltaX = endX - startX;
 
-    const threshold = 50; // minimum swipe distance in px
+    const threshold = 50; // px
     if (deltaX > threshold) {
-      // swipe right -> previous slide
+      // swipe right -> previous
       goTo(currentIndex - 1);
     } else if (deltaX < -threshold) {
-      // swipe left -> next slide
+      // swipe left -> next
       goTo(currentIndex + 1);
     }
 
     startX = null;
   });
 
-  updateSlides();
+  updateSlider();
 
   // Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');
@@ -63,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.toggle('nav-open');
     });
 
-    // Close menu on nav link click (mobile)
     haloNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         document.body.classList.remove('nav-open');
