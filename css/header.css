@@ -1,0 +1,78 @@
+/* ---------------------------------------------------
+   HALO HEADER (DESKTOP)
+--------------------------------------------------- */
+
+.halo-header {
+  background: #b30000;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.halo-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 260px;   /* space for sponsor sidebar */
+  padding-right: 20px;
+  min-height: 260px;     /* match badge height */
+  gap: 20px;
+}
+
+.club-badge {
+  height: 260px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.halo-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.halo-nav a {
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* ---------------------------------------------------
+   SPONSOR SIDEBAR (DESKTOP)
+--------------------------------------------------- */
+
+.sponsor-sidebar {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  z-index: 999;
+}
+
+.sponsor-sidebar img {
+  width: 100%;
+  border-radius: 4px;
+}
