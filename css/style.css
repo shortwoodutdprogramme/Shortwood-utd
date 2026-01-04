@@ -49,6 +49,12 @@ a:hover {
   font-family: 'Oswald', sans-serif;
   margin-bottom: 20px;
 }
+
+/* FIX: Remove extra gap above fixture tables */
+.section.fixture-table {
+  padding-top: 0;
+}
+
 /* ---------------------------------------------------
    FIXTURE TABLES
 --------------------------------------------------- */
@@ -75,6 +81,7 @@ a:hover {
   padding: 12px 10px;
   border: 1px solid #ccc;
 }
+
 .fixture-table td {
   color: #000;   /* ensures table text is always black */
 }
