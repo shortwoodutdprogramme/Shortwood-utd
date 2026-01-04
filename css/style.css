@@ -271,4 +271,156 @@ a:hover {
   body.nav-open .halo-nav {
     display: flex;
   }
+}/* -----------------------------------------------------
+   MOBILE RESPONSIVE — GLOBAL
+----------------------------------------------------- */
+@media (max-width: 900px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  /* Remove sponsor sidebar on mobile */
+  .sponsor-sidebar {
+    display: none;
+  }
+
+  /* -----------------------------------------------------
+     HEADER & NAV
+  ----------------------------------------------------- */
+  .halo-inner {
+    padding-left: 0;
+    justify-content: space-between;
+  }
+
+  .halo-nav {
+    display: none;
+    flex-direction: column;
+    background: #b30000;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  body.nav-open .halo-nav {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .halo-nav a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  /* -----------------------------------------------------
+     SECTIONS
+  ----------------------------------------------------- */
+  .section {
+    padding: 40px 0;
+  }
+
+  .section h1,
+  .section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  /* -----------------------------------------------------
+     SLIDER
+  ----------------------------------------------------- */
+  .slider {
+    min-height: 220px;
+  }
+
+  .slide {
+    padding: 10px 0;
+  }
+
+  .slider-btn {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .slider-btn.left {
+    left: 10px;
+  }
+
+  .slider-btn.right {
+    right: 10px;
+  }
+
+  .report-card {
+    padding: 15px;
+  }
+
+  .report-card h3 {
+    font-size: 20px;
+  }
+
+  .report-subtitle {
+    font-size: 15px;
+  }
+
+  /* -----------------------------------------------------
+     FIXTURES TABLE
+  ----------------------------------------------------- */
+  .fixtures-table {
+    font-size: 14px;
+  }
+
+  .fixtures-table th,
+  .fixtures-table td {
+    padding: 8px;
+  }
+
+  /* Make table scrollable on small screens */
+  .fixtures-table-wrapper {
+    overflow-x: auto;
+  }
+
+  /* -----------------------------------------------------
+     FOOTER
+  ----------------------------------------------------- */
+  .footer {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* -----------------------------------------------------
+   EXTRA SMALL DEVICES (max-width: 600px)
+----------------------------------------------------- */
+@media (max-width: 600px) {
+
+  .halo-header {
+    padding: 8px 0;
+  }
+
+  .club-badge {
+    height: 50px;
+  }
+
+  .report-card {
+    padding: 12px;
+  }
+
+  .slider-btn {
+    top: 55%;
+  }
+
+  .section h1,
+  .section h2 {
+    font-size: 22px;
+  }
 }
