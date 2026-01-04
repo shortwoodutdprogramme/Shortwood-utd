@@ -60,7 +60,7 @@ a:hover {
 --------------------------------------------------- */
 
 .fixture-table {
-  padding: 40px 20px;
+  padding: 10px 20px 40px 20px; /* reduced top padding to remove the gap */
   text-align: center;
 }
 
@@ -107,4 +107,18 @@ a:hover {
   font-size: 0.9rem;
   margin-bottom: 10px;
   color: #555;
+}
+
+/* ---------------------------------------------------
+   FIXES REQUESTED BY USER
+--------------------------------------------------- */
+
+/* Make all fixture text white inside red sections */
+.section-red .fixture-table {
+  color: white;
+}
+
+/* Make table cells white inside red sections */
+.section-red .fixture-table td {
+  color: white;
 }
