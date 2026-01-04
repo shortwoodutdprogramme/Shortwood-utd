@@ -28,39 +28,11 @@ a:hover {
 }
 
 /* ---------------------------------------------------
-   SECTION BASE STYLES
---------------------------------------------------- */
-
-.section {
-  padding: 20px 0;
-}
-
-.section-white {
-  background: white;
-}
-
-.section-red {
-  background: #b30000;
-  color: white;
-}
-
-.section h1,
-.section h2 {
-  font-family: 'Oswald', sans-serif;
-  margin-bottom: 20px;
-}
-
-/* FIX: Remove extra gap above fixture tables */
-.section.fixture-table {
-  padding-top: 0;
-}
-
-/* ---------------------------------------------------
    FIXTURE TABLES
 --------------------------------------------------- */
 
 .fixture-table {
-  padding: 10px 20px 40px 20px; /* reduced top padding to remove the gap */
+  padding: 10px 20px 40px 20px;
   text-align: center;
 }
 
@@ -82,17 +54,27 @@ a:hover {
   border: 1px solid #ccc;
 }
 
-.fixture-table td {
-  color: #000;   /* ensures table text is always black */
-}
-
+/* Table header styling */
 .fixture-table th {
   background: #222;
   color: white;
 }
 
-.fixture-table tbody tr:nth-child(even) {
-  background: #f9f9f9;
+/* Alternating row colours with correct text */
+.fixture-table tbody tr:nth-child(odd) td {
+  background: white !important;
+  color: black !important;
+}
+
+.fixture-table tbody tr:nth-child(even) td {
+  background: #b30000 !important;
+  color: white !important;
+}
+
+/* Hover effect */
+.fixture-table tbody tr:hover td {
+  background: #444 !important;
+  color: white !important;
 }
 
 .first-team h2 {
@@ -110,15 +92,14 @@ a:hover {
 }
 
 /* ---------------------------------------------------
-   FIXES REQUESTED BY USER
+   SECTION FIXES
 --------------------------------------------------- */
 
-/* Make all fixture text white inside red sections */
-.section-red .fixture-table {
-  color: white;
+.section.fixture-table {
+  padding-top: 0;
 }
 
-/* Make table cells white inside red sections */
-.section-red .fixture-table td {
-  color: white;
+.section-white {
+  background: white;
+  color: black;
 }
