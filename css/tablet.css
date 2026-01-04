@@ -1,0 +1,26 @@
+/* ---------------------------------------------------
+   TABLET BREAKPOINT (max-width: 1200px)
+--------------------------------------------------- */
+
+@media (max-width: 1200px) {
+
+  /* Slightly reduce badge size */
+  .club-badge {
+    height: 200px;
+  }
+
+  /* Reduce left padding for sponsor sidebar space */
+  .halo-inner {
+    padding-left: 200px;
+  }
+
+  /* Slider spacing */
+  .slider-wrapper {
+    margin-top: 10px;
+  }
+
+  /* Section spacing */
+  .section {
+    padding: 40px 0;
+  }
+}

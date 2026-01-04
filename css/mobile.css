@@ -4,4 +4,90 @@
 
   /* mobile rules here */
 
+}/* ---------------------------------------------------
+   MOBILE OVERRIDES (max-width: 900px)
+--------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  /* HALO HEADER */
+  .halo-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 10px;
+    min-height: auto;
+  }
+
+  .club-badge {
+    height: 120px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .halo-nav {
+    display: none;
+    flex-direction: column;
+    background: #b30000;
+    padding: 20px;
+    gap: 15px;
+    width: 100%;
+  }
+
+  body.nav-open .halo-nav {
+    display: flex;
+  }
+
+  /* SPONSOR SIDEBAR */
+  .sponsor-sidebar {
+    display: none;
+  }
+
+  /* SLIDER */
+  .slider-btn {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .slider-btn.left {
+    left: 10px;
+  }
+
+  .slider-btn.right {
+    right: 10px;
+  }
+
+  .report-card {
+    padding: 15px;
+  }
+
+  .report-card h3 {
+    font-size: 20px;
+  }
+
+  .report-subtitle {
+    font-size: 15px;
+  }
+
+  /* SECTION HEADINGS */
+  .section h1,
+  .section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 15px;
+  }
 }
