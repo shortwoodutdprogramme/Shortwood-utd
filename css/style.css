@@ -35,25 +35,29 @@ a:hover {
 
 .halo-inner {
   display: flex;
-  flex-direction: row;        /* FORCE horizontal layout */
-  align-items: center;        /* Vertically center badge + nav + button */
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  padding-left: 150px;        /* Space for sponsor sidebar */
+
+  /* Increase left padding to match the new badge height */
+  padding-left: 260px;
   padding-right: 20px;
-  gap: 20px;
-  width: 100%;
+
+  /* Allow the header to stretch to fit the badge */
+  min-height: 260px;
 }
 
 .club-badge {
-  height: 60px;
-  flex-shrink: 0;             /* Prevent badge from shrinking */
+  height: 260px;
+  width: auto;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .halo-nav {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  flex-wrap: nowrap;          /* Prevent nav from wrapping under badge */
+  flex-wrap: nowrap;
 }
 
 .halo-nav a {
