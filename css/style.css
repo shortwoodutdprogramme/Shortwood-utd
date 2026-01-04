@@ -1,37 +1,29 @@
-/* -----------------------------------------------------
-   GLOBAL RESET & BASE STYLES
------------------------------------------------------ */
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Roboto', sans-serif;
   background: #f5f5f5;
   color: #222;
   line-height: 1.6;
 }
-
 a {
   color: #b30000;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* -----------------------------------------------------
-   HALO HEADER
------------------------------------------------------ */
+/* HALO HEADER */
 .halo-header {
   background: #b30000;
   color: white;
@@ -40,25 +32,20 @@ a:hover {
   top: 0;
   z-index: 1000;
 }
-
 .halo-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 150px; /* matches sponsor sidebar */
+  padding-left: 150px;
 }
-
 .club-badge {
   height: 60px;
 }
-
 .halo-nav a {
   margin-left: 20px;
   font-weight: 600;
   color: white;
 }
-
-/* Mobile menu toggle */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -67,16 +54,13 @@ a:hover {
   border: none;
   cursor: pointer;
 }
-
 .menu-toggle span {
   width: 25px;
   height: 3px;
   background: white;
 }
 
-/* -----------------------------------------------------
-   SPONSOR SIDEBAR
------------------------------------------------------ */
+/* SPONSOR SIDEBAR */
 .sponsor-sidebar {
   position: fixed;
   left: 0;
@@ -86,85 +70,69 @@ a:hover {
   flex-direction: column;
   gap: 10px;
   padding: 5px;
+  z-index: 999;
 }
-
 .sponsor-sidebar img {
   width: 100%;
   border-radius: 4px;
 }
 
-/* -----------------------------------------------------
-   SECTIONS
------------------------------------------------------ */
+/* SECTIONS */
 .section {
   padding: 60px 0;
 }
-
 .section-white {
   background: white;
 }
-
 .section-red {
   background: #b30000;
   color: white;
 }
-
-.section h1,
-.section h2 {
+.section h1, .section h2 {
   font-family: 'Oswald', sans-serif;
   margin-bottom: 20px;
 }
 
-/* -----------------------------------------------------
-   MATCH REPORTS SLIDER
------------------------------------------------------ */
+/* SLIDER */
 .slider-wrapper {
   position: relative;
   margin-top: 20px;
 }
-
 .slider {
   overflow: hidden;
   width: 100%;
   min-height: 260px;
 }
-
 .slider-track {
   display: flex;
   transition: transform 0.4s ease;
   will-change: transform;
 }
-
 .slide {
   min-width: 100%;
   padding: 20px 0;
 }
-
-/* Report card */
 .report-card {
   background: #ffffff;
   border-radius: 6px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
 .report-card h3 {
   margin-top: 0;
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
 }
-
 .report-subtitle {
   font-weight: 600;
   margin-bottom: 10px;
   color: #444;
 }
-
 .report-link a {
   font-weight: bold;
 }
 
-/* Slider buttons */
+/* SLIDER BUTTONS */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -180,124 +148,52 @@ a:hover {
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
-
 .slider-btn:hover {
   opacity: 1;
 }
-
 .slider-btn:disabled {
   opacity: 0.3;
   cursor: default;
 }
-
 .slider-btn.left {
   left: 20px;
 }
-
 .slider-btn.right {
   right: 20px;
 }
 
-/* -----------------------------------------------------
-   FIXTURES TABLE
------------------------------------------------------ */
-.fixtures-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.fixtures-table th,
-.fixtures-table td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-}
-
-.fixtures-table th {
-  background: #900000;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-}
-
-/* -----------------------------------------------------
-   FOOTER
------------------------------------------------------ */
+/* FOOTER */
 .footer {
   background: #222;
   color: white;
   padding: 40px 0;
   margin-top: 40px;
 }
-
 .footer a {
   color: #ffcccc;
 }
-
 .social-icons {
   display: flex;
   gap: 15px;
   margin: 20px 0;
 }
-
 .social-icons .icon svg {
   width: 28px;
   height: 28px;
   fill: white;
 }
 
-/* -----------------------------------------------------
-   MOBILE RESPONSIVE
------------------------------------------------------ */
+/* MOBILE */
 @media (max-width: 900px) {
   .halo-inner {
     padding-left: 0;
   }
-
   .sponsor-sidebar {
     display: none;
   }
-
   .menu-toggle {
     display: flex;
   }
-
-  .halo-nav {
-    display: none;
-    flex-direction: column;
-    background: #b30000;
-    padding: 20px;
-  }
-
-  body.nav-open .halo-nav {
-    display: flex;
-  }
-}/* -----------------------------------------------------
-   MOBILE RESPONSIVE — GLOBAL
------------------------------------------------------ */
-@media (max-width: 900px) {
-
-  body {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .container {
-    width: 92%;
-  }
-
-  /* Remove sponsor sidebar on mobile */
-  .sponsor-sidebar {
-    display: none;
-  }
-
-  /* -----------------------------------------------------
-     HEADER & NAV
-  ----------------------------------------------------- */
-  .halo-inner {
-    padding-left: 0;
-    justify-content: space-between;
-  }
-
   .halo-nav {
     display: none;
     flex-direction: column;
@@ -305,122 +201,30 @@ a:hover {
     padding: 20px;
     gap: 15px;
   }
-
   body.nav-open .halo-nav {
     display: flex;
   }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .halo-nav a {
-    font-size: 18px;
-    padding: 10px 0;
-  }
-
-  /* -----------------------------------------------------
-     SECTIONS
-  ----------------------------------------------------- */
-  .section {
-    padding: 40px 0;
-  }
-
-  .section h1,
-  .section h2 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  /* -----------------------------------------------------
-     SLIDER
-  ----------------------------------------------------- */
-  .slider {
-    min-height: 220px;
-  }
-
-  .slide {
-    padding: 10px 0;
-  }
-
   .slider-btn {
     font-size: 18px;
     padding: 8px 12px;
   }
-
   .slider-btn.left {
     left: 10px;
   }
-
   .slider-btn.right {
     right: 10px;
   }
-
   .report-card {
     padding: 15px;
   }
-
   .report-card h3 {
     font-size: 20px;
   }
-
   .report-subtitle {
     font-size: 15px;
   }
-
-  /* -----------------------------------------------------
-     FIXTURES TABLE
-  ----------------------------------------------------- */
-  .fixtures-table {
-    font-size: 14px;
-  }
-
-  .fixtures-table th,
-  .fixtures-table td {
-    padding: 8px;
-  }
-
-  /* Make table scrollable on small screens */
-  .fixtures-table-wrapper {
-    overflow-x: auto;
-  }
-
-  /* -----------------------------------------------------
-     FOOTER
-  ----------------------------------------------------- */
-  .footer {
+  .section h1, .section h2 {
+    font-size: 26px;
     text-align: center;
-    padding: 30px 0;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-}
-
-/* -----------------------------------------------------
-   EXTRA SMALL DEVICES (max-width: 600px)
------------------------------------------------------ */
-@media (max-width: 600px) {
-
-  .halo-header {
-    padding: 8px 0;
-  }
-
-  .club-badge {
-    height: 50px;
-  }
-
-  .report-card {
-    padding: 12px;
-  }
-
-  .slider-btn {
-    top: 55%;
-  }
-
-  .section h1,
-  .section h2 {
-    font-size: 22px;
   }
 }
