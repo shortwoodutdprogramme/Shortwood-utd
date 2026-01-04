@@ -5,42 +5,38 @@
 .halo-header {
   background: #b30000;
   color: white;
-  padding: 10px 0;
-
-  /* Header now scrolls away normally */
-  position: relative;
+  padding: 15px 0;
+  position: relative;  /* scrolls away with the page */
   top: auto;
-
   z-index: 1000;
 }
 
+/* Use the same container as the rest of the site */
 .halo-inner {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+
   display: flex;
-  flex-direction: row;          /* Force horizontal layout */
-  align-items: center;          /* Vertically center badge + nav + toggle */
-  justify-content: space-between;
-
-  /* Space for sponsor sidebar */
-  padding-left: 260px;
-  padding-right: 20px;
-
-  /* Match badge height */
-  min-height: 260px;
-
-  gap: 20px;
+  flex-direction: column;   /* badge on top, nav below */
+  align-items: center;      /* center horizontally */
+  justify-content: center;
+  gap: 12px;
 }
 
 .club-badge {
   height: 260px;
   width: auto;
-  flex-shrink: 0;               /* Prevent badge shrinking */
+  flex-shrink: 0;
 }
 
+/* Nav directly under the badge, centred */
 .halo-nav {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  flex-wrap: nowrap;            /* Prevent nav wrapping under badge */
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .halo-nav a {
