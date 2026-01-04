@@ -6,33 +6,41 @@
   background: #b30000;
   color: white;
   padding: 10px 0;
-  position: sticky;
-  top: 0;
+
+  /* Header now scrolls away normally */
+  position: relative;
+  top: auto;
+
   z-index: 1000;
 }
 
 .halo-inner {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: row;          /* Force horizontal layout */
+  align-items: center;          /* Vertically center badge + nav + toggle */
   justify-content: space-between;
-  padding-left: 260px;   /* space for sponsor sidebar */
+
+  /* Space for sponsor sidebar */
+  padding-left: 260px;
   padding-right: 20px;
-  min-height: 260px;     /* match badge height */
+
+  /* Match badge height */
+  min-height: 260px;
+
   gap: 20px;
 }
 
 .club-badge {
   height: 260px;
   width: auto;
-  flex-shrink: 0;
+  flex-shrink: 0;               /* Prevent badge shrinking */
 }
 
 .halo-nav {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap;            /* Prevent nav wrapping under badge */
 }
 
 .halo-nav a {
@@ -41,6 +49,7 @@
   white-space: nowrap;
 }
 
+/* Hamburger toggle (hidden on desktop) */
 .menu-toggle {
   display: none;
   flex-direction: column;
