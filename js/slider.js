@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <p class="report-subtitle">${report.subtitle}</p>
         <p>${report.preview}</p>
         <p class="report-link">
-          <a href="../reports/${report.file}" target="_blank">Read full report →</a>
+          <a href="${report.file}" target="_blank">Read full report →</a>
         </p>
       </article>
     `;

@@ -1,418 +1,274 @@
-/* ============================================================
-   SHORTWOOD UNITED FC — MASTER STYLESHEET
-   Cleaned, organised, commented for long-term maintainability
-   ============================================================ */
-
-
-/* ------------------------------------------------------------
-   1. GLOBAL THEME & RESET
------------------------------------------------------------- */
-
-:root {
-  --wood-crimson: #7d0014;
-  --wood-dark: #3b0010;
-  --wood-cream: #fdf6e3;
-  --wood-text-dark: #222;
-
-  --body-bg: #f4f4f4;
-  --text-main: #111;
-
-  --card-bg: #ffffff;
-  --table-border: #ddd;
-
-  --accent: #7d0014;
-  --muted: #666;
-
-  --link: #0044aa;
-  --link-hover: #002b66;
-}
-
-*, *::before, *::after {
+/* -----------------------------------------------------
+   GLOBAL RESET & BASE STYLES
+----------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Roboto', Arial, sans-serif;
-  background: var(--body-bg);
-  color: var(--text-main);
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
 }
 
+a {
+  color: #b30000;
+  text-decoration: none;
+}
 
-/* ------------------------------------------------------------
-   2. LAYOUT STRUCTURE
------------------------------------------------------------- */
-
-main {
-  margin-left: 150px; /* space for sponsor sidebar */
-  padding-bottom: 40px;
-  background: #fff;
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
-  max-width: 900px;
+  width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
-  text-align: center;
 }
 
-.section {
-  padding: 30px 0;
-}
-
-.section-red {
-  background: var(--wood-crimson);
-  color: #fff;
-}
-
-.section-white {
-  background: #fff;
-  color: #111;
-}
-
-h1, h2, h3 {
-  font-family: 'Oswald', 'Roboto', sans-serif;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-
-/* ------------------------------------------------------------
-   3. HEADER (HALO)
------------------------------------------------------------- */
-
+/* -----------------------------------------------------
+   HALO HEADER
+----------------------------------------------------- */
 .halo-header {
-  width: 100%;
-  background: var(--wood-crimson);
-  color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  background: #b30000;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .halo-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 12px 20px 16px;
-  padding-left: 150px; /* aligns with sidebar */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
+  padding-left: 150px; /* matches sponsor sidebar */
 }
 
 .club-badge {
-  height: 120px;
-  margin-bottom: 10px;
-}
-
-.menu-toggle {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 32px;
-  height: 26px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  margin: 4px 0;
-  background: #fff;
-  transition: 0.2s;
-}
-
-.halo-nav {
-  display: flex;
-  gap: 28px;
-  margin-top: 10px;
+  height: 60px;
 }
 
 .halo-nav a {
-  color: #fff;
-  text-decoration: none;
+  margin-left: 20px;
   font-weight: 600;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.25rem;
+  color: white;
 }
 
-.halo-nav a:hover {
-  text-decoration: underline;
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
 
-/* ------------------------------------------------------------
-   4. SPONSOR SIDEBAR (LEFT, FIXED)
------------------------------------------------------------- */
-
+/* -----------------------------------------------------
+   SPONSOR SIDEBAR
+----------------------------------------------------- */
 .sponsor-sidebar {
   position: fixed;
-  top: 0;
   left: 0;
-  width: 150px;
-  height: 100vh;
-  padding: 20px 10px;
-  background: #f2f2f2;
+  top: 100px;
+  width: 120px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-  z-index: 200;
+  gap: 10px;
+  padding: 5px;
 }
 
 .sponsor-sidebar img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin: 10px 0;
-  background: #fff;
-  padding: 5px;
+  width: 100%;
   border-radius: 4px;
-  border: 1px solid #ccc;
 }
 
-
-/* ------------------------------------------------------------
-   5. HERO SECTION
------------------------------------------------------------- */
-
-.hero h2 {
-  margin-top: 0;
-  font-size: 1.3rem;
+/* -----------------------------------------------------
+   SECTIONS
+----------------------------------------------------- */
+.section {
+  padding: 60px 0;
 }
 
-.hero p {
-  margin: 4px 0;
+.section-white {
+  background: white;
 }
 
-
-/* ------------------------------------------------------------
-   6. MATCH REPORTS / SLIDER
------------------------------------------------------------- */
-
-.reports-section {
-  padding-bottom: 40px;
+.section-red {
+  background: #b30000;
+  color: white;
 }
 
-.report-card {
-  background: var(--card-bg);
-  border: 1px solid var(--table-border);
-  border-radius: 4px;
-  padding: 16px;
-  text-align: left;
+.section h1,
+.section h2 {
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
 }
 
-.report-card h3 {
-  margin-top: 0;
-  margin-bottom: 4px;
-}
-
-.report-subtitle {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: var(--muted);
-  font-style: italic;
-}
-
-.report-link a {
-  color: var(--link);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.report-link a:hover {
-  text-decoration: underline;
-}
-
-
-/* Slider */
-
+/* -----------------------------------------------------
+   MATCH REPORTS SLIDER
+----------------------------------------------------- */
 .slider-wrapper {
   position: relative;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .slider {
   overflow: hidden;
   width: 100%;
-  min-height: 320px;
+  min-height: 260px;
 }
 
 .slider-track {
   display: flex;
   transition: transform 0.4s ease;
+  will-change: transform;
 }
 
 .slide {
   min-width: 100%;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
+  padding: 20px 0;
 }
 
+/* Report card */
+.report-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.report-card h3 {
+  margin-top: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+.report-subtitle {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.report-link a {
+  font-weight: bold;
+}
+
+/* Slider buttons */
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #fff;
-  color: var(--wood-crimson);
+  background: #b30000;
+  color: white;
   border: none;
-  font-size: 2em;
-  padding: 5px 12px;
+  padding: 10px 14px;
+  font-size: 22px;
   cursor: pointer;
   z-index: 10;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
-.slider-btn.left { left: 10px; }
-.slider-btn.right { right: 10px; }
-.slider-btn:disabled { opacity: 0.3; cursor: default; }
-
-
-/* Newspaper clipping */
-
-.newspaper-clipping {
-  background: var(--wood-cream);
-  color: var(--wood-text-dark);
-  padding: 18px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
-  font-family: Georgia, 'Times New Roman', serif;
-  max-width: 520px;
-  margin: 0 auto;
-  border-left: 6px solid crimson;
-  text-align: left;
+.slider-btn:hover {
+  opacity: 1;
 }
 
+.slider-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
 
-/* ------------------------------------------------------------
-   7. FIXTURES TABLE
------------------------------------------------------------- */
+.slider-btn.left {
+  left: 20px;
+}
 
+.slider-btn.right {
+  right: 20px;
+}
+
+/* -----------------------------------------------------
+   FIXTURES TABLE
+----------------------------------------------------- */
 .fixtures-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--card-bg);
-  border: 1px solid var(--table-border);
+  margin-top: 20px;
 }
 
 .fixtures-table th,
 .fixtures-table td {
-  padding: 8px 10px;
-  border-bottom: 1px solid var(--table-border);
-  text-align: left;
-  font-size: 0.95rem;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
 }
 
 .fixtures-table th {
-  background: #eee;
-  font-weight: 600;
+  background: #900000;
+  color: white;
+  font-family: 'Oswald', sans-serif;
 }
 
-
-/* ------------------------------------------------------------
-   8. FOOTER
------------------------------------------------------------- */
-
+/* -----------------------------------------------------
+   FOOTER
+----------------------------------------------------- */
 .footer {
-  background: var(--wood-crimson);
-  color: #fff;
-  padding: 40px 0 30px;
-  border-top: 4px solid var(--wood-dark);
+  background: #222;
+  color: white;
+  padding: 40px 0;
+  margin-top: 40px;
 }
 
-.footer .container {
-  text-align: left;
-}
-
-.footer .container p {
-  margin: 8px 0;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.footer .container a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer .container a:hover {
-  text-decoration: underline;
+.footer a {
+  color: #ffcccc;
 }
 
 .social-icons {
-  margin: 18px 0 12px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 12px;
-}
-
-.social-icons .icon {
-  width: 16px;
-  height: 16px;
+  gap: 15px;
+  margin: 20px 0;
 }
 
 .social-icons .icon svg {
-  width: 100%;
-  height: 100%;
+  width: 28px;
+  height: 28px;
+  fill: white;
 }
 
-.archive-footer-link {
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
-
-/* ------------------------------------------------------------
-   9. MOBILE RESPONSIVE
------------------------------------------------------------- */
-
-@media (max-width: 768px) {
-
-  main {
-    margin-left: 0;
+/* -----------------------------------------------------
+   MOBILE RESPONSIVE
+----------------------------------------------------- */
+@media (max-width: 900px) {
+  .halo-inner {
+    padding-left: 0;
   }
 
   .sponsor-sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .halo-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 12px;
     display: none;
   }
 
-  .section {
-    padding: 24px 0;
+  .menu-toggle {
+    display: flex;
   }
 
-  .newspaper-clipping {
-    width: 90vw;
-    max-width: 520px;
-    padding: 14px;
+  .halo-nav {
+    display: none;
+    flex-direction: column;
+    background: #b30000;
+    padding: 20px;
   }
 
-  .slider-btn {
-    font-size: 1.8em;
-  }
-
-  .fixtures-table {
-    font-size: 0.9rem;
+  body.nav-open .halo-nav {
+    display: flex;
   }
 }
