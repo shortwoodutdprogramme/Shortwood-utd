@@ -1,19 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Slider logic: horizontal translateX with swipe
+document.addEventListener('DOMContentLoaded', async () => {
+
+  // 1. Load reports.json
+  const response = await fetch('./js/reports.json');
+  const reports = await response.json();
+
+  // 2. Build slider dynamically
   const slider = document.getElementById('report-slider');
   const track = slider.querySelector('.slider-track');
+
+  track.innerHTML = ''; // clear any existing slides
+
+  reports.forEach(report => {
+    const slide = document.createElement('div');
+    slide.className = 'slide';
+
+    slide.innerHTML = `
+      <article class="report-card">
+        <h3>${report.title}</h3>
+        <p class="report-subtitle">${report.subtitle}</p>
+        <p>${report.preview}</p>
+        <p class="report-link">
+          <a href="../reports/${report.file}" target="_blank">Read full report →</a>
+        </p>
+      </article>
+    `;
+
+    track.appendChild(slide);
+  });
+
+  // 3. Slider logic
   const slides = Array.from(track.querySelectorAll('.slide'));
   const prevBtn = document.querySelector('.slider-btn.left');
   const nextBtn = document.querySelector('.slider-btn.right');
 
+  // Start at newest report (index 0)
   let currentIndex = 0;
 
   function updateSlider() {
     const offset = -currentIndex * 100;
     track.style.transform = `translateX(${offset}%)`;
 
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex === slides.length - 1;
+    // Right = newer (index 0)
+    nextBtn.disabled = currentIndex === 0;
+
+    // Left = older (last index)
+    prevBtn.disabled = currentIndex === slides.length - 1;
   }
 
   function goTo(index) {
@@ -22,10 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSlider();
   }
 
-  prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-  nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+  // Button navigation
+  prevBtn.addEventListener('click', () => goTo(currentIndex + 1)); // older
+  nextBtn.addEventListener('click', () => goTo(currentIndex - 1)); // newer
 
-  // Touch swipe support
+  // 4. Swipe support
   let startX = null;
 
   slider.addEventListener('touchstart', (e) => {
@@ -39,21 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const endX = e.changedTouches[0].clientX;
     const deltaX = endX - startX;
 
-    const threshold = 50; // px
-    if (deltaX > threshold) {
-      // swipe right -> previous
-      goTo(currentIndex - 1);
-    } else if (deltaX < -threshold) {
-      // swipe left -> next
-      goTo(currentIndex + 1);
-    }
+    const threshold = 50;
+
+    if (deltaX > threshold) goTo(currentIndex + 1); // older
+    if (deltaX < -threshold) goTo(currentIndex - 1); // newer
 
     startX = null;
   });
 
   updateSlider();
 
-  // Mobile menu toggle
+  // 5. Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const haloNav = document.querySelector('.halo-nav');
 
