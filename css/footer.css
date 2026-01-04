@@ -17,6 +17,7 @@
   display: flex;
   gap: 15px;
   margin: 20px 0;
+  justify-content: center;   /* ⭐ centers the icons */
 }
 
 .social-icons .icon svg {
@@ -24,7 +25,13 @@
   height: 28px;
   fill: white;
 }
+
 .footer-shift {
-  padding-left: 180px;   /* aligns footer with main content column */
-  background: #000000;   /* same black as footer so the shift is invisible */
+  padding-left: 180px;       /* aligns footer with main content column */
+  background: #000000;       /* invisible shift */
+}
+
+/* ⭐ NEW: Center all footer text */
+.footer .container {
+  text-align: center;
 }
