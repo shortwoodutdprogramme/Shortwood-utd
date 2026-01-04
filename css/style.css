@@ -4,26 +4,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   background: #f5f5f5;
   color: #222;
   line-height: 1.6;
 }
+
 a {
   color: #b30000;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* HALO HEADER */
+/* ---------------------------------------------------
+   HALO HEADER (DESKTOP)
+--------------------------------------------------- */
+
 .halo-header {
   background: #b30000;
   color: white;
@@ -35,29 +42,26 @@ a:hover {
 
 .halo-inner {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: row;          /* Force horizontal layout */
+  align-items: center;          /* Vertically center badge + nav + toggle */
   justify-content: space-between;
-
-  /* Increase left padding to match the new badge height */
-  padding-left: 260px;
+  padding-left: 260px;          /* Space for sponsor sidebar */
   padding-right: 20px;
-
-  /* Allow the header to stretch to fit the badge */
-  min-height: 260px;
+  min-height: 260px;            /* Match badge height */
+  gap: 20px;
 }
 
 .club-badge {
   height: 260px;
   width: auto;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;               /* Prevent badge shrinking */
 }
 
 .halo-nav {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap;            /* Prevent nav wrapping under badge */
 }
 
 .halo-nav a {
@@ -67,7 +71,7 @@ a:hover {
 }
 
 .menu-toggle {
-  display: none;
+  display: none;                /* Only shown on mobile */
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -81,7 +85,10 @@ a:hover {
   background: white;
 }
 
-/* SPONSOR SIDEBAR */
+/* ---------------------------------------------------
+   SPONSOR SIDEBAR (DESKTOP)
+--------------------------------------------------- */
+
 .sponsor-sidebar {
   position: fixed;
   left: 0;
@@ -93,62 +100,80 @@ a:hover {
   padding: 5px;
   z-index: 999;
 }
+
 .sponsor-sidebar img {
   width: 100%;
   border-radius: 4px;
 }
 
-/* SECTIONS */
+/* ---------------------------------------------------
+   SECTIONS
+--------------------------------------------------- */
+
 .section {
   padding: 60px 0;
 }
+
 .section-white {
   background: white;
 }
+
 .section-red {
   background: #b30000;
   color: white;
 }
-.section h1, .section h2 {
+
+.section h1,
+.section h2 {
   font-family: 'Oswald', sans-serif;
   margin-bottom: 20px;
 }
 
-/* SLIDER */
+/* ---------------------------------------------------
+   SLIDER
+--------------------------------------------------- */
+
 .slider-wrapper {
   position: relative;
   margin-top: 20px;
 }
+
 .slider {
   overflow: hidden;
   width: 100%;
   min-height: 260px;
 }
+
 .slider-track {
   display: flex;
   transition: transform 0.4s ease;
   will-change: transform;
 }
+
 .slide {
   min-width: 100%;
   padding: 20px 0;
 }
+
 .report-card {
   background: #ffffff;
   border-radius: 6px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 .report-card h3 {
   margin-top: 0;
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
 }
+
 .report-subtitle {
   font-weight: 600;
   margin-bottom: 10px;
   color: #444;
 }
+
 .report-link a {
   font-weight: bold;
 }
@@ -169,107 +194,47 @@ a:hover {
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
+
 .slider-btn:hover {
   opacity: 1;
 }
+
 .slider-btn:disabled {
   opacity: 0.3;
   cursor: default;
 }
+
 .slider-btn.left {
   left: 20px;
 }
+
 .slider-btn.right {
   right: 20px;
 }
 
-/* FOOTER */
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+
 .footer {
   background: #222;
   color: white;
   padding: 40px 0;
   margin-top: 40px;
 }
+
 .footer a {
   color: #ffcccc;
 }
+
 .social-icons {
   display: flex;
   gap: 15px;
   margin: 20px 0;
 }
+
 .social-icons .icon svg {
   width: 28px;
   height: 28px;
   fill: white;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-
-  .halo-inner {
-    flex-direction: row;       /* KEEP horizontal layout on mobile */
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 0;
-    padding-right: 10px;
-  }
-
-  .club-badge {
-    height: 50px;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .halo-nav {
-    display: none;
-    flex-direction: column;
-    background: #b30000;
-    padding: 20px;
-    gap: 15px;
-    width: 100%;
-  }
-
-  body.nav-open .halo-nav {
-    display: flex;
-  }
-
-  .sponsor-sidebar {
-    display: none;
-  }
-}
-  /* SLIDER */
-  .slider-btn {
-    font-size: 18px;
-    padding: 8px 12px;
-  }
-
-  .slider-btn.left {
-    left: 10px;
-  }
-
-  .slider-btn.right {
-    right: 10px;
-  }
-
-  .report-card {
-    padding: 15px;
-  }
-
-  .report-card h3 {
-    font-size: 20px;
-  }
-
-  .report-subtitle {
-    font-size: 15px;
-  }
-
-  /* SECTION HEADINGS */
-  .section h1,
-  .section h2 {
-    font-size: 26px;
-    text-align: center;
-  }
 }
