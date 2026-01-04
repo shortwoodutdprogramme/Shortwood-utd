@@ -49,3 +49,55 @@ a:hover {
   font-family: 'Oswald', sans-serif;
   margin-bottom: 20px;
 }
+/* ---------------------------------------------------
+   FIXTURE TABLES
+--------------------------------------------------- */
+
+.fixture-table {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.fixture-table h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.fixture-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.fixture-table th,
+.fixture-table td {
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+}
+.fixture-table td {
+  color: #000;   /* ensures table text is always black */
+}
+
+.fixture-table th {
+  background: #222;
+  color: white;
+}
+
+.fixture-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.first-team h2 {
+  color: #b30000;
+}
+
+.reserve-team h2 {
+  color: #0077cc;
+}
+
+.kickoff-note {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #555;
+}
