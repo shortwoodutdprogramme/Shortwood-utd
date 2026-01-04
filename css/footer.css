@@ -1,12 +1,12 @@
 /* ---------------------------------------------------
    FOOTER
 --------------------------------------------------- */
-
 .footer {
   background: #222;
   color: white;
   padding: 40px 0;
   margin-top: 40px;
+  text-align: center;   /* center all footer text */
 }
 
 .footer a {
@@ -17,10 +17,12 @@
   display: flex;
   gap: 15px;
   margin: 20px 0;
+  justify-content: center;   /* center the icon row */
 }
 
 .social-icons .icon svg {
   width: 28px;
   height: 28px;
   fill: white;
+}
 }
