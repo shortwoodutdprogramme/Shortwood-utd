@@ -103,12 +103,25 @@ a:hover {
   background: white;
   color: black;
 }
+
 .section-red {
   background: #b30000;
   color: white;
   padding: 40px 0;
 }
+
 .section {
   width: 100%;
   display: block;
+}
+
+/* ---------------------------------------------------
+   footer black block (FIX APPLIED)
+--------------------------------------------------- */
+
+.footer-left-block {
+  width: 180px;     /* matches left column alignment */
+  height: 300px;    /* matches footer height */
+  background: black;
+  float: left;      /* pushes footer content to the right */
 }
