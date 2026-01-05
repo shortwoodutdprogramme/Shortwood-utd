@@ -5,10 +5,8 @@
 .main-layout {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;   /* ⭐ THIS makes the sidebar match main-content height */
   width: 100%;
-
-
 }
 
 /* ---------------------------------------------------
@@ -87,6 +85,7 @@
 
   /* Soft edge instead of a thick border */
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Larger, clean sponsor blocks */
