@@ -126,3 +126,16 @@ a:hover {
   background: black;
   float: left;      /* pushes footer content to the right */
 }
+
+/* ---------------------------------------------------
+   red section fixture table text fix
+--------------------------------------------------- */
+
+.section-red .fixture-table td,
+.section-red .fixture-table th {
+  color: white !important;
+}
+
+.section-red .fixture-table.first-team h2 {
+  color: white !important;
+}
