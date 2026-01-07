@@ -139,3 +139,62 @@ a:hover {
 .section-red .fixture-table.first-team h2 {
   color: white !important;
 }
+
+/* ---------------------------------------------------
+   NEW: FIRST TEAM LEAGUE TABLE (WHITE SECTION)
+--------------------------------------------------- */
+
+.league-table.white-bg {
+  background: #ffffff;
+  color: #111;
+  padding: 30px 20px 40px 20px;
+  border-radius: 6px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.league-table.white-bg h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #111;
+  font-family: 'Oswald', sans-serif;
+}
+
+.league-table.white-bg table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.league-table.white-bg th,
+.league-table.white-bg td {
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #111;
+}
+
+/* Header styling for white section */
+.league-table.white-bg th {
+  background: #eee;
+  color: #111;
+  font-weight: bold;
+}
+
+/* Zebra striping */
+.league-table.white-bg tbody tr:nth-child(even) td {
+  background: #f7f7f7;
+}
+
+.league-table.white-bg tbody tr:nth-child(odd) td {
+  background: #ffffff;
+}
+
+/* ---------------------------------------------------
+   LIVE LEAGUE TABLE EMBED
+--------------------------------------------------- */
+
+.league-embed iframe {
+  width: 100%;
+  border: none;
+}
