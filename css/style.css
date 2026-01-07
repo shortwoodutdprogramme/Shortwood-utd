@@ -198,3 +198,17 @@ a:hover {
   width: 100%;
   border: none;
 }
+
+/* ---------------------------------------------------
+   POLISH: LINK STYLING INSIDE WHITE SECTION
+--------------------------------------------------- */
+
+.section-white a {
+  color: #b30000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-white a:hover {
+  text-decoration: underline;
+}
