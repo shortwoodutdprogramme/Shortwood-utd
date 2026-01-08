@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/mobile.css">
   <link rel="stylesheet" href="./css/tablet.css">
+  <link rel="stylesheet" href="./css/league-tables.css">
 </head>
 
 <body>
@@ -187,13 +188,109 @@
 <!-- FULL WIDTH WHITE LEAGUE TABLE SECTION -->
 <section class="section section-white league-table">
   <div class="container">
-    <h2>Hellenic Division 1 – Live League Table</h2>
+   /* Base table styling */
+.league-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  background: #fff;
+}
 
-    <div id="live-league-table">
-      <p>Loading live standings…</p>
-    </div>
-  </div>
-</section>
+/* Sticky header */
+.league-table thead th {
+  position: sticky;
+  top: 0;
+  background: #b30000;
+  color: #fff;
+  padding: 8px;
+  z-index: 2;
+}
+
+/* Cells */
+.league-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternating rows */
+.league-table tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+/* Shortwood highlight */
+.league-table tr.shortwood {
+  background: #b30000 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* Colour-coded GD & Pts */
+.league-table td:nth-child(9),
+.league-table td:nth-child(10) {
+  font-weight: bold;
+}
+
+.league-table td:nth-child(9):not(.shortwood),
+.league-table td:nth-child(10):not(.shortwood) {
+  color: #333;
+}
+
+.league-table td:nth-child(9):not(.shortwood):before,
+.league-table td:nth-child(10):not(.shortwood):before {
+  content: "";
+}
+
+.league-table td:nth-child(9):not(.shortwood),
+.league-table td:nth-child(10):not(.shortwood) {
+  color: inherit;
+}
+
+.league-table td:nth-child(9):not(.shortwood)[data-value^="-"],
+.league-table td:nth-child(10):not(.shortwood)[data-value^="-"] {
+  color: #b30000;
+}
+
+.league-table td:nth-child(9):not(.shortwood)[data-value^="0"],
+.league-table td:nth-child(10):not(.shortwood)[data-value^="0"] {
+  color: #777;
+}
+
+.league-table td:nth-child(9):not(.shortwood)[data-value]:not([data-value^="-"]):not([data-value^="0"]),
+.league-table td:nth-child(10):not(.shortwood)[data-value]:not([data-value^="-"]):not([data-value^="0"]) {
+  color: #008000;
+}
+
+/* Form column */
+.league-table td:last-child {
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+
+/* Mobile compact mode */
+@media (max-width: 600px) {
+  .league-table thead {
+    display: none;
+  }
+
+  .league-table tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .league-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+  }
+
+  .league-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #b30000;
+  }
+}
 
 
 <!-- RESERVE TEAM -->
@@ -294,42 +391,25 @@
 
 <!-- LIVE LEAGUE TABLE SCRIPT -->
 <script>
-async function loadLeagueTable() {
-  const target = document.getElementById("live-league-table");
+document.querySelectorAll("#leagueTable th").forEach((header, index) => {
+  header.addEventListener("click", () => {
+    const table = header.closest("table");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const type = header.dataset.sort;
 
-  try {
-    const response = await fetch("https://api.allorigins.win/raw?url=https://www.nonleaguehq.com/hellenic-division-1/");
-    const text = await response.text();
+    const sorted = rows.sort((a, b) => {
+      const A = a.children[index].innerText.trim();
+      const B = b.children[index].innerText.trim();
 
-    console.log("Fetched HTML:", text); // ✅ This line shows us what came back
+      if (type === "number") return Number(A) - Number(B);
+      return A.localeCompare(B);
+    });
 
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, "text/html");
-
-    const table = doc.querySelector("table");
-
-    if (table) {
-      target.innerHTML = "";
-      target.appendChild(table);
-
-      const rows = target.querySelectorAll("tr");
-      rows.forEach(row => {
-        if (row.innerText.toLowerCase().includes("shortwood")) {
-          row.style.background = "#b30000";
-          row.style.color = "white";
-          row.style.fontWeight = "bold";
-        }
-      });
-    } else {
-      target.innerHTML = "<p>League table unavailable.</p>";
-    }
-
-  } catch (error) {
-    target.innerHTML = "<p>Unable to load live standings.</p>";
-  }
-}
-
-loadLeagueTable();
+    tbody.innerHTML = "";
+    sorted.forEach(r => tbody.appendChild(r));
+  });
+});
 </script>
 
 </body>

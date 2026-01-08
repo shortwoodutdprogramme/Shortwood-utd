@@ -1,0 +1,103 @@
+/* Base table styling */
+.league-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  background: #fff;
+}
+
+/* Sticky header */
+.league-table thead th {
+  position: sticky;
+  top: 0;
+  background: #b30000;
+  color: #fff;
+  padding: 8px;
+  z-index: 2;
+}
+
+/* Cells */
+.league-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternating rows */
+.league-table tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+/* Shortwood highlight */
+.league-table tr.shortwood {
+  background: #b30000 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* Colour-coded GD & Pts */
+.league-table td:nth-child(9),
+.league-table td:nth-child(10) {
+  font-weight: bold;
+}
+
+.league-table td:nth-child(9):not(.shortwood),
+.league-table td:nth-child(10):not(.shortwood) {
+  color: #333;
+}
+
+.league-table td:nth-child(9):not(.shortwood):before,
+.league-table td:nth-child(10):not(.shortwood):before {
+  content: "";
+}
+
+.league-table td:nth-child(9):not(.shortwood),
+.league-table td:nth-child(10):not(.shortwood) {
+  color: inherit;
+}
+
+.league-table td:nth-child(9):not(.shortwood)[data-value^="-"],
+.league-table td:nth-child(10):not(.shortwood)[data-value^="-"] {
+  color: #b30000;
+}
+
+.league-table td:nth-child(9):not(.shortwood)[data-value^="0"],
+.league-table td:nth-child(10):not(.shortwood)[data-value^="0"] {
+  color: #777;
+}
+
+.league-table td:nth-child(9):not(.shortwood)[data-value]:not([data-value^="-"]):not([data-value^="0"]),
+.league-table td:nth-child(10):not(.shortwood)[data-value]:not([data-value^="-"]):not([data-value^="0"]) {
+  color: #008000;
+}
+
+/* Form column */
+.league-table td:last-child {
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+
+/* Mobile compact mode */
+@media (max-width: 600px) {
+  .league-table thead {
+    display: none;
+  }
+
+  .league-table tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .league-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+  }
+
+  .league-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #b30000;
+  }
+}
