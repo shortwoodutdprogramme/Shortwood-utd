@@ -301,18 +301,17 @@ async function loadLeagueTable() {
     const response = await fetch("https://api.allorigins.win/raw?url=https://www.nonleaguehq.com/hellenic-division-1/");
     const text = await response.text();
 
-    // Parse the HTML from NonLeagueHQ
+    console.log("Fetched HTML:", text); // ✅ This line shows us what came back
+
     const parser = new DOMParser();
     const doc = parser.parseFromString(text, "text/html");
 
-    // Find the first table on the page
     const table = doc.querySelector("table");
 
     if (table) {
       target.innerHTML = "";
       target.appendChild(table);
 
-      // Highlight Shortwood United
       const rows = target.querySelectorAll("tr");
       rows.forEach(row => {
         if (row.innerText.toLowerCase().includes("shortwood")) {
