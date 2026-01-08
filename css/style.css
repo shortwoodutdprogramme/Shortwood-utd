@@ -212,3 +212,42 @@ a:hover {
 .section-white a:hover {
   text-decoration: underline;
 }
+
+/* ---------------------------------------------------
+   LIVE TABLE: NONLEAGUEHQ TABLE STYLING
+--------------------------------------------------- */
+
+#live-league-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+#live-league-table th,
+#live-league-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+#live-league-table th {
+  background: #eee;
+  font-weight: bold;
+}
+
+/* Zebra striping for readability */
+#live-league-table tbody tr:nth-child(even) td {
+  background: #f7f7f7;
+}
+
+#live-league-table tbody tr:nth-child(odd) td {
+  background: #ffffff;
+}
+
+/* Optional: Shortwood highlight class (if needed later) */
+.shortwood-highlight {
+  background: #b30000 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
