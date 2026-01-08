@@ -4,14 +4,45 @@
 
 @media (max-width: 600px) {
 
+  .page-frame {
+    overflow-x: hidden;
+  }
+
+  /* your other mobile rules follow here… */
+
   /* ============================
      FIX MAIN LAYOUT (IMPORTANT)
      ============================ */
   .main-layout {
-    display: block; /* Collapse 2-column layout into 1 column */
+    display: block !important;   /* Collapse 2-column layout */
+    width: 100%;
   }
 
-  /* GENERAL PAGE SPACING */
+  .sponsor-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .sponsor-sidebar img {
+    max-width: 80%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  /* Prevent horizontal page shifting */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* ============================
+     GENERAL PAGE SPACING
+     ============================ */
   .section {
     padding: 25px 15px;
   }
@@ -32,12 +63,10 @@
 
   /* ============================
      UNIVERSAL TABLE MOBILE STYLE
-     (applies to fixtures + league table)
      ============================ */
-
   .fixture-table table thead,
   .league-table thead {
-    display: none; /* hide header */
+    display: none;
   }
 
   .fixture-table table tr,
@@ -60,13 +89,11 @@
     border-bottom: 1px solid #eee;
   }
 
-  /* Remove last border for cleaner look */
   .fixture-table table td:last-child,
   .league-table td:last-child {
     border-bottom: none;
   }
 
-  /* Labels on the left */
   .fixture-table table td::before,
   .league-table td::before {
     content: attr(data-label);
@@ -79,8 +106,6 @@
   /* ============================
      LEAGUE TABLE SPECIAL CASES
      ============================ */
-
-  /* Shortwood highlight preserved */
   .league-table tr.shortwood {
     background: #b30000 !important;
     color: #fff !important;
@@ -91,32 +116,12 @@
     color: #fff;
   }
 
-  /* Make GD and Pts stand out more on mobile */
   .league-table td[data-label="GD"],
   .league-table td[data-label="Pts"] {
     font-weight: bold;
   }
 
-  /* Add subtle spacing between sections */
   .league-table {
     margin-top: 10px;
-  }
-
-  /* ============================
-     SPONSOR SIDEBAR (FIXED)
-     ============================ */
-
-  .sponsor-sidebar {
-    display: block;
-    width: 100%;
-    margin-top: 25px;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .sponsor-sidebar img {
-    max-width: 80%;
-    margin: 10px auto;
-    display: block;
   }
 }

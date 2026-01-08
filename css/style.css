@@ -27,6 +27,36 @@ a:hover {
   margin: 0 auto;
 }
 
+.page-frame {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================
+   MAIN LAYOUT (DESKTOP)
+   ============================ */
+.main-layout {
+  display: flex;            /* Create two-column layout */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+
+/* Left column: sponsor sidebar */
+.sponsor-sidebar {
+  width: 180px;             /* Fixed width column */
+  flex-shrink: 0;           /* Prevent collapsing */
+}
+
+/* Right column: main content */
+.main-content {
+  flex: 1;                  /* Take remaining space */
+  min-width: 0;             /* Prevent horizontal overflow */
+}
+
+
 /* ---------------------------------------------------
    FIXTURE TABLES
 --------------------------------------------------- */
