@@ -151,7 +151,7 @@
         </div>
       </section>
 
-    <!-- FIXTURES SECTION -->
+  <!-- FIXTURES SECTION -->
 <section class="section section-red fixtures-section" id="fixtures">
   <div class="container">
 
@@ -183,117 +183,110 @@
 
   </div>
 </section>
-
-
-<!-- FULL WIDTH WHITE LEAGUE TABLE SECTION -->
+<!-- LEAGUE TABLE SECTION -->
 <section class="section section-white league-table">
   <div class="container">
-   /* Base table styling */
-.league-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 0.9rem;
-  background: #fff;
-}
 
-/* Sticky header */
-.league-table thead th {
-  position: sticky;
-  top: 0;
-  background: #b30000;
-  color: #fff;
-  padding: 8px;
-  z-index: 2;
-}
+    <h2>Hellenic Division 1 – League Table</h2>
 
-/* Cells */
-.league-table td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-}
+<table id="leagueTable" class="league-table">
+  <thead>
+    <tr>
+      <th data-sort="number">Pos</th>
+      <th data-sort="string">Team</th>
+      <th data-sort="number">P</th>
+      <th data-sort="number">W</th>
+      <th data-sort="number">D</th>
+      <th data-sort="number">L</th>
+      <th data-sort="number">GF</th>
+      <th data-sort="number">GA</th>
+      <th data-sort="number">GD</th>
+      <th data-sort="number">Pts</th>
+      <th data-sort="string">Form</th>
+    </tr>
+  </thead>
 
-/* Alternating rows */
-.league-table tbody tr:nth-child(even) {
-  background: #f7f7f7;
-}
+  <tbody>
+    <tr>
+      <td>1</td><td>Bewdley Town</td><td>21</td><td>14</td><td>3</td><td>4</td><td>46</td><td>25</td><td data-value="21">21</td><td data-value="45">45</td><td>W W D W L</td>
+    </tr>
 
-/* Shortwood highlight */
-.league-table tr.shortwood {
-  background: #b30000 !important;
-  color: #fff !important;
-  font-weight: bold;
-}
+    <tr>
+      <td>2</td><td>Wantage Town</td><td>20</td><td>13</td><td>5</td><td>2</td><td>69</td><td>31</td><td data-value="38">38</td><td data-value="44">44</td><td>W W W D W</td>
+    </tr>
 
-/* Colour-coded GD & Pts */
-.league-table td:nth-child(9),
-.league-table td:nth-child(10) {
-  font-weight: bold;
-}
+    <tr>
+      <td>3</td><td>FC Stratford</td><td>18</td><td>13</td><td>2</td><td>3</td><td>40</td><td>15</td><td data-value="25">25</td><td data-value="41">41</td><td>W W L W W</td>
+    </tr>
 
-.league-table td:nth-child(9):not(.shortwood),
-.league-table td:nth-child(10):not(.shortwood) {
-  color: #333;
-}
+    <tr>
+      <td>4</td><td>Stonehouse Town</td><td>19</td><td>10</td><td>5</td><td>4</td><td>47</td><td>23</td><td data-value="24">24</td><td data-value="35">35</td><td>D W W L D</td>
+    </tr>
 
-.league-table td:nth-child(9):not(.shortwood):before,
-.league-table td:nth-child(10):not(.shortwood):before {
-  content: "";
-}
+    <tr>
+      <td>5</td><td>Redditch Borough</td><td>18</td><td>11</td><td>1</td><td>6</td><td>49</td><td>28</td><td data-value="21">21</td><td data-value="34">34</td><td>W L W W L</td>
+    </tr>
 
-.league-table td:nth-child(9):not(.shortwood),
-.league-table td:nth-child(10):not(.shortwood) {
-  color: inherit;
-}
+    <tr>
+      <td>6</td><td>Newent Town</td><td>19</td><td>10</td><td>2</td><td>7</td><td>41</td><td>31</td><td data-value="10">10</td><td data-value="32">32</td><td>L W W L W</td>
+    </tr>
 
-.league-table td:nth-child(9):not(.shortwood)[data-value^="-"],
-.league-table td:nth-child(10):not(.shortwood)[data-value^="-"] {
-  color: #b30000;
-}
+    <tr>
+      <td>7</td><td>Cheltenham Saracens</td><td>18</td><td>9</td><td>4</td><td>5</td><td>37</td><td>30</td><td data-value="7">7</td><td data-value="31">31</td><td>D W L W D</td>
+    </tr>
 
-.league-table td:nth-child(9):not(.shortwood)[data-value^="0"],
-.league-table td:nth-child(10):not(.shortwood)[data-value^="0"] {
-  color: #777;
-}
+    <tr>
+      <td>8</td><td>Malmesbury Victoria</td><td>18</td><td>8</td><td>4</td><td>6</td><td>31</td><td>33</td><td data-value="-2">-2</td><td data-value="28">28</td><td>L W D L W</td>
+    </tr>
 
-.league-table td:nth-child(9):not(.shortwood)[data-value]:not([data-value^="-"]):not([data-value^="0"]),
-.league-table td:nth-child(10):not(.shortwood)[data-value]:not([data-value^="-"]):not([data-value^="0"]) {
-  color: #008000;
-}
+    <tr>
+      <td>9</td><td>Ludlow Town</td><td>19</td><td>8</td><td>4</td><td>7</td><td>37</td><td>42</td><td data-value="-5">-5</td><td data-value="28">28</td><td>W L D L W</td>
+    </tr>
 
-/* Form column */
-.league-table td:last-child {
-  font-family: monospace;
-  letter-spacing: 2px;
-}
+    <tr>
+      <td>10</td><td>Alcester Town</td><td>20</td><td>7</td><td>4</td><td>9</td><td>26</td><td>25</td><td data-value="1">1</td><td data-value="25">25</td><td>D L W L D</td>
+    </tr>
 
-/* Mobile compact mode */
-@media (max-width: 600px) {
-  .league-table thead {
-    display: none;
-  }
+    <tr>
+      <td>11</td><td>Brimscombe & Thrupp</td><td>19</td><td>7</td><td>4</td><td>8</td><td>27</td><td>33</td><td data-value="-6">-6</td><td data-value="25">25</td><td>L W D L W</td>
+    </tr>
 
-  .league-table tr {
-    display: block;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-  }
+    <tr>
+      <td>12</td><td>Woodford United</td><td>19</td><td>6</td><td>5</td><td>8</td><td>30</td><td>42</td><td data-value="-12">-12</td><td data-value="23">23</td><td>D L L W D</td>
+    </tr>
 
-  .league-table td {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 10px;
-  }
+    <tr>
+      <td>13</td><td>Chipping Sodbury Town</td><td>19</td><td>6</td><td>4</td><td>9</td><td>21</td><td>27</td><td data-value="-6">-6</td><td data-value="22">22</td><td>L W L D L</td>
+    </tr>
 
-  .league-table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: #b30000;
-  }
-}
+    <tr>
+      <td>14</td><td>Carterton</td><td>17</td><td>6</td><td>2</td><td>9</td><td>24</td><td>39</td><td data-value="-15">-15</td><td data-value="20">20</td><td>L D W L L</td>
+    </tr>
 
+    <tr class="shortwood">
+      <td>15</td><td>Shortwood United</td><td>17</td><td>5</td><td>3</td><td>9</td><td>30</td><td>35</td><td data-value="-5">-5</td><td data-value="18">18</td><td>W L D L L</td>
+    </tr>
 
-<!-- RESERVE TEAM -->
+    <tr>
+      <td>16</td><td>Wellington</td><td>21</td><td>4</td><td>2</td><td>15</td><td>37</td><td>71</td><td data-value="-34">-34</td><td data-value="14">14</td><td>L L L D L</td>
+    </tr>
+
+    <tr>
+      <td>17</td><td>Clanfield 85</td><td>20</td><td>3</td><td>4</td><td>13</td><td>22</td><td>46</td><td data-value="-24">-24</td><td data-value="13">13</td><td>D L L L D</td>
+    </tr>
+
+    <tr>
+      <td>18</td><td>Thame United Reserves</td><td>20</td><td>1</td><td>2</td><td>17</td><td>21</td><td>59</td><td data-value="-38">-38</td><td data-value="5">5</td><td>L L D L L</td>
+    </tr>
+  </tbody>
+</table>e">
+      <!-- your full table goes here -->
+    </table>
+
+  </div>
+</section>
+
+<!-- RESERVE TEAM FIXTURES -->
 <section class="section section-red fixtures-section">
   <div class="container">
 
@@ -323,6 +316,7 @@
 
   </div>
 </section>
+
 
 </main>
 
