@@ -95,3 +95,19 @@
     margin-top: 10px;
   }
 }
+
+@media (max-width: 600px) {
+  .sponsor-sidebar {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .sponsor-sidebar img {
+    max-width: 80%;
+    margin: 10px auto;
+    display: block;
+  }
+}
