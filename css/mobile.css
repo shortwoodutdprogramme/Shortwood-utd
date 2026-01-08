@@ -4,6 +4,13 @@
 
 @media (max-width: 600px) {
 
+  /* ============================
+     FIX MAIN LAYOUT (IMPORTANT)
+     ============================ */
+  .main-layout {
+    display: block; /* Collapse 2-column layout into 1 column */
+  }
+
   /* GENERAL PAGE SPACING */
   .section {
     padding: 25px 15px;
@@ -94,9 +101,11 @@
   .league-table {
     margin-top: 10px;
   }
-}
 
-@media (max-width: 600px) {
+  /* ============================
+     SPONSOR SIDEBAR (FIXED)
+     ============================ */
+
   .sponsor-sidebar {
     display: block;
     width: 100%;
