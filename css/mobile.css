@@ -1,93 +1,97 @@
-/* MOBILE STYLES — Shortwood United FC */
+/* ============================
+   MOBILE LAYOUT (max-width: 600px)
+   ============================ */
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 
-  /* mobile rules here */
+  /* GENERAL PAGE SPACING */
+  .section {
+    padding: 25px 15px;
+  }
 
-}/* ---------------------------------------------------
-   MOBILE OVERRIDES (max-width: 900px)
---------------------------------------------------- */
+  h2 {
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
 
-@media (max-width: 900px) {
+  .kickoff-note {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+    opacity: 0.9;
+  }
 
-  /* HALO HEADER */
-  .halo-inner {
-    flex-direction: row;
-    align-items: center;
+  /* ============================
+     UNIVERSAL TABLE MOBILE STYLE
+     (applies to fixtures + league table)
+     ============================ */
+
+  .fixture-table table thead,
+  .league-table thead {
+    display: none; /* hide header */
+  }
+
+  .fixture-table table tr,
+  .league-table tr {
+    display: block;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px 0;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .fixture-table table td,
+  .league-table td {
+    display: flex;
     justify-content: space-between;
-    padding-left: 0;
-    padding-right: 10px;
-    min-height: auto;
-  }
-
-  .club-badge {
-    height: 120px;
-  }
-
-  .menu-toggle {
-    display: flex;
-    margin-top: 10px;
-  }
-
-  .halo-nav {
-    display: none;
-    flex-direction: column;
-    background: #b30000;
-    padding: 20px;
-    gap: 15px;
-    width: 100%;
-  }
-
-  body.nav-open .halo-nav {
-    display: flex;
-  }
-
-  /* SPONSOR SIDEBAR */
-  .sponsor-sidebar {
-    display: none;
-  }
-
-  /* SLIDER */
-  .slider-btn {
-    font-size: 18px;
     padding: 8px 12px;
+    font-size: 0.92rem;
+    border-bottom: 1px solid #eee;
   }
 
-  .slider-btn.left {
-    left: 10px;
+  /* Remove last border for cleaner look */
+  .fixture-table table td:last-child,
+  .league-table td:last-child {
+    border-bottom: none;
   }
 
-  .slider-btn.right {
-    right: 10px;
+  /* Labels on the left */
+  .fixture-table table td::before,
+  .league-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #b30000;
+    margin-right: 10px;
+    flex-shrink: 0;
   }
 
-  .report-card {
-    padding: 15px;
+  /* ============================
+     LEAGUE TABLE SPECIAL CASES
+     ============================ */
+
+  /* Shortwood highlight preserved */
+  .league-table tr.shortwood {
+    background: #b30000 !important;
+    color: #fff !important;
+    border-color: #8a0000;
   }
 
-  .report-card h3 {
-    font-size: 20px;
+  .league-table tr.shortwood td::before {
+    color: #fff;
   }
 
-  .report-subtitle {
-    font-size: 15px;
+  /* Make GD and Pts stand out more on mobile */
+  .league-table td[data-label="GD"],
+  .league-table td[data-label="Pts"] {
+    font-weight: bold;
   }
 
-  /* SECTION HEADINGS */
-  .section h1,
-  .section h2 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  /* FOOTER */
-  .footer {
-    text-align: center;
-    padding: 30px 10px;
-  }
-
-  .social-icons {
-    justify-content: center;
-    margin-top: 15px;
+  /* Add subtle spacing between sections */
+  .league-table {
+    margin-top: 10px;
   }
 }
