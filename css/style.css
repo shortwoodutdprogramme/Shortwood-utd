@@ -144,10 +144,16 @@ a:hover {
 }
 
 /* ---------------------------------------------------
-   footer black block (FIX APPLIED)
+   FOOTER FIX (APPLIED)
 --------------------------------------------------- */
 
-/* REMOVED: .footer-left-block (no longer needed) */
+.footer-inner {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /* ---------------------------------------------------
    red section fixture table text fix
