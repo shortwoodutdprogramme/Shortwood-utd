@@ -42,8 +42,6 @@ a:hover {
   gap: 20px;
 }
 
-
-
 /* Left column: sponsor sidebar */
 .sponsor-sidebar {
   width: 180px;             /* Fixed width column */
@@ -55,7 +53,6 @@ a:hover {
   flex: 1;                  /* Take remaining space */
   min-width: 0;             /* Prevent horizontal overflow */
 }
-
 
 /* ---------------------------------------------------
    FIXTURE TABLES
@@ -150,12 +147,7 @@ a:hover {
    footer black block (FIX APPLIED)
 --------------------------------------------------- */
 
-.footer-left-block {
-  width: 180px;     /* matches left column alignment */
-  height: 300px;    /* matches footer height */
-  background: black;
-  float: left;      /* pushes footer content to the right */
-}
+/* REMOVED: .footer-left-block (no longer needed) */
 
 /* ---------------------------------------------------
    red section fixture table text fix
