@@ -4,45 +4,63 @@
 
 @media (max-width: 600px) {
 
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+  }
+
   .page-frame {
     overflow-x: hidden;
   }
 
-  .club-badge {
-    display: block;
+  /* ============================
+     HEADER & BADGE FIX
+     ============================ */
+
+  /* Force header containers to stop flexing on mobile */
+  .halo-header,
+  .halo-shift {
+    display: block !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  /* Override desktop flex layout */
+  .halo-inner {
+    display: block !important;
+    text-align: center !important;
+    width: 100%;
     margin: 0 auto;
+  }
+
+  /* Centre the badge no matter what */
+  .club-badge {
+    display: block !important;
+    margin: 0 auto !important;
     max-width: 120px;
   }
 
-  .halo-header,
-  .halo-shift {
-    text-align: center;
-  }
-
-  .halo-inner {
-    display: block;
-    text-align: center;
-  }
+  /* ============================
+     FOOTER FIX
+     ============================ */
 
   .footer-left-block {
-    float: none;
-    width: 100%;
-    height: auto;
+    float: none !important;
+    width: 100% !important;
+    height: auto !important;
     margin-top: 20px;
   }
 
-
-
-
-
-
-  /* your other mobile rules follow here… */
+  .footer-inner {
+    display: block !important;
+  }
 
   /* ============================
-     FIX MAIN LAYOUT (IMPORTANT)
+     MAIN LAYOUT
      ============================ */
+
   .main-layout {
-    display: block !important;   /* Collapse 2-column layout */
+    display: block !important;
     width: 100%;
   }
 
@@ -63,14 +81,10 @@
     width: 100%;
   }
 
-  /* Prevent horizontal page shifting */
-  body, html {
-    overflow-x: hidden;
-  }
-
   /* ============================
-     GENERAL PAGE SPACING
+     GENERAL SPACING
      ============================ */
+
   .section {
     padding: 25px 15px;
   }
@@ -92,6 +106,7 @@
   /* ============================
      UNIVERSAL TABLE MOBILE STYLE
      ============================ */
+
   .fixture-table table thead,
   .league-table thead {
     display: none;
@@ -134,6 +149,7 @@
   /* ============================
      LEAGUE TABLE SPECIAL CASES
      ============================ */
+
   .league-table tr.shortwood {
     background: #b30000 !important;
     color: #fff !important;
