@@ -15,7 +15,15 @@
      ============================ */
 
   /* Remove desktop sidebar offset */
-.halo-shift,
+.halo-shift {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+
 .halo-inner {
   display: block !important;
   text-align: center !important;
