@@ -5,7 +5,7 @@
 .main-layout {
   display: flex;
   flex-direction: row;
-  align-items: stretch;   /* ⭐ THIS makes the sidebar match main-content height */
+  align-items: stretch;   /* Sidebar matches main-content height */
   width: 100%;
 }
 
@@ -22,6 +22,7 @@
   z-index: 1000;
 }
 
+/* Main header container */
 .halo-inner {
   max-width: 1100px;
   width: 90%;
@@ -34,12 +35,14 @@
   gap: 12px;
 }
 
+/* Club badge */
 .club-badge {
   height: 260px;
   width: auto;
   flex-shrink: 0;
 }
 
+/* Navigation */
 .halo-nav {
   display: flex;
   flex-direction: row;
@@ -79,13 +82,13 @@
   width: 180px;
   background: #d0d0d0;
   padding: 20px 15px;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
 
   /* Soft edge instead of a thick border */
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-
 }
 
 /* Larger, clean sponsor blocks */
@@ -102,9 +105,5 @@
 .main-content {
   flex: 1;
   padding: 0 20px;
-  text-align: center;   /* ⭐ centers main content text */
-}
-.halo-shift {
-  padding-left: 180px;   /* shift header content to match sidebar width */
-  background: #b30000;   /* same red as header so the shift is invisible */
+  text-align: center;   /* Centres main content text */
 }
