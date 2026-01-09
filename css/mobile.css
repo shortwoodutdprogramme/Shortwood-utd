@@ -11,7 +11,12 @@
   .club-badge {
     display: block;
     margin: 0 auto;
-    max-width: 120px; /* optional */
+    max-width: 120px;
+  }
+
+  .halo-header,
+  .halo-shift {
+    text-align: center;
   }
 
   .halo-inner {
