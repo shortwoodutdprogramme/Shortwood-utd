@@ -1,5 +1,16 @@
 /* ---------------------------------------------------
-   HALO HEADER (DESKTOP)
+   MAIN LAYOUT WRAPPER
+--------------------------------------------------- */
+
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;   /* ⭐ THIS makes the sidebar match main-content height */
+  width: 100%;
+}
+
+/* ---------------------------------------------------
+   HALO HEADER (SCROLLS WITH PAGE)
 --------------------------------------------------- */
 
 .halo-header {
@@ -11,13 +22,6 @@
   z-index: 1000;
 }
 
-/* Wrapper that shifts header content to align with sidebar */
-.halo-shift {
-  padding-left: 180px;        /* matches sidebar width */
-  background: #b30000;        /* seamless with header */
-}
-
-/* Inner header container */
 .halo-inner {
   max-width: 1100px;
   width: 90%;
@@ -30,14 +34,12 @@
   gap: 12px;
 }
 
-/* Club badge */
 .club-badge {
   height: 260px;
   width: auto;
   flex-shrink: 0;
 }
 
-/* Navigation */
 .halo-nav {
   display: flex;
   flex-direction: row;
@@ -69,43 +71,40 @@
 }
 
 /* ---------------------------------------------------
-   MOBILE FIXES (max-width: 600px)
+   SPONSOR SIDEBAR (SCROLLS WITH PAGE)
 --------------------------------------------------- */
 
-@media (max-width: 600px) {
+.sponsor-sidebar {
+  position: relative;
+  width: 180px;
+  background: #d0d0d0;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-  /* Remove sidebar offset from header */
-  .halo-shift {
-    padding-left: 0 !important;
-    display: block !important;
-    text-align: center !important;
-  }
+  /* Soft edge instead of a thick border */
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 
-  /* Disable desktop flex layout */
-  .halo-inner {
-    display: block !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-  }
+}
 
-  /* Centre the badge */
-  .club-badge {
-    display: block !important;
-    margin: 0 auto !important;
-    float: none !important;
-    height: 180px;        /* optional: scale down for mobile */
-  }
+/* Larger, clean sponsor blocks */
+.sponsor-sidebar img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
 
-  /* Nav stays centred */
-  .halo-nav {
-    justify-content: center !important;
-    text-align: center !important;
-  }
+/* ---------------------------------------------------
+   MAIN CONTENT AREA
+--------------------------------------------------- */
 
-  /* Show hamburger if needed later */
-  .menu-toggle {
-    display: flex;
-    margin: 0 auto;
-  }
+.main-content {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;   /* ⭐ centers main content text */
+}
+.halo-shift {
+  padding-left: 180px;   /* shift header content to match sidebar width */
+  background: #b30000;   /* same red as header so the shift is invisible */
 }
