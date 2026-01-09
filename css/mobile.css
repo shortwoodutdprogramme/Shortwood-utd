@@ -5,10 +5,7 @@
 @media (max-width: 600px) {
 
   /* Prevent horizontal scrolling */
-  html, body {
-    overflow-x: hidden;
-  }
-
+  html, body,
   .page-frame {
     overflow-x: hidden;
   }
@@ -17,15 +14,13 @@
      HEADER & BADGE FIX
      ============================ */
 
-  /* Force header containers to stop flexing on mobile */
-  .halo-header,
+  /* Remove desktop sidebar offset */
   .halo-shift {
-    display: block !important;
+    padding-left: 0 !important;
     text-align: center !important;
-    width: 100%;
   }
 
-  /* Override desktop flex layout */
+  /* Disable flex column stacking for mobile */
   .halo-inner {
     display: block !important;
     text-align: center !important;
@@ -33,11 +28,12 @@
     margin: 0 auto;
   }
 
-  /* Centre the badge no matter what */
+  /* Centre the badge */
   .club-badge {
     display: block !important;
     margin: 0 auto !important;
-    max-width: 120px;
+    height: 180px; /* scaled for mobile */
+    width: auto;
   }
 
   /* ============================
@@ -69,16 +65,21 @@
     margin-bottom: 20px;
     text-align: center;
     padding: 10px 0;
+    position: relative;
+    z-index: 1;
   }
 
   .sponsor-sidebar img {
     max-width: 80%;
     margin: 10px auto;
     display: block;
+    height: auto;
   }
 
   .main-content {
     width: 100%;
+    position: relative;
+    z-index: 2;
   }
 
   /* ============================
