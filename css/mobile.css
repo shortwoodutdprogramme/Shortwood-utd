@@ -14,37 +14,24 @@
      HEADER & BADGE FIX
      ============================ */
 
-  /* Remove desktop sidebar offset */
-.halo-shift {
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 100% !important;
-  display: block !important;
-  text-align: center !important;
-}
+  /* Halo-inner becomes a simple block container */
+  .halo-inner {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
 
-
-.halo-inner {
-  display: block !important;
-  text-align: center !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-
-
-/* Force badge centring */
-.club-badge {
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  float: none !important;
-  height: 180px;
-  max-width: 120px;
-}
-
-
+  /* Force badge centring */
+  .club-badge {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    height: 180px;
+    max-width: 120px;
+  }
 
   /* ============================
      FOOTER FIX
