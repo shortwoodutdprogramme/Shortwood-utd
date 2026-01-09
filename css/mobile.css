@@ -37,13 +37,6 @@
      FOOTER FIX
      ============================ */
 
-  .footer-left-block {
-    float: none !important;
-    width: 100% !important;
-    height: auto !important;
-    margin-top: 20px;
-  }
-
   .footer-inner {
     display: block !important;
   }
