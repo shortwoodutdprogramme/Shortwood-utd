@@ -13,12 +13,19 @@
     margin: 0 auto;
     max-width: 120px; /* optional */
   }
+
+  .halo-inner {
+    display: block;
+    text-align: center;
+  }
+
   .footer-left-block {
     float: none;
     width: 100%;
     height: auto;
     margin-top: 20px;
   }
+
 
 
 
