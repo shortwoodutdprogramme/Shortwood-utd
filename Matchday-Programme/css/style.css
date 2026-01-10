@@ -1,0 +1,281 @@
+/* ---------------------------------------------------
+   BASE RESET
+--------------------------------------------------- */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: #b30000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-frame {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================
+   MAIN LAYOUT (DESKTOP)
+   ============================ */
+.main-layout {
+  display: flex;            /* Create two-column layout */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Left column: sponsor sidebar */
+.sponsor-sidebar {
+  width: 180px;             /* Fixed width column */
+  flex-shrink: 0;           /* Prevent collapsing */
+}
+
+/* Right column: main content */
+.main-content {
+  flex: 1;                  /* Take remaining space */
+  min-width: 0;             /* Prevent horizontal overflow */
+}
+
+/* ---------------------------------------------------
+   FIXTURE TABLES
+--------------------------------------------------- */
+
+.fixture-table {
+  padding: 10px 20px 40px 20px;
+  text-align: center;
+}
+
+.fixture-table h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.fixture-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.fixture-table th,
+.fixture-table td {
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+}
+
+/* Table header styling */
+.fixture-table th {
+  background: #222;
+  color: white;
+}
+
+/* Alternating row colours with correct text */
+.fixture-table tbody tr:nth-child(odd) td {
+  background: white !important;
+  color: black !important;
+}
+
+.fixture-table tbody tr:nth-child(even) td {
+  background: #b30000 !important;
+  color: white !important;
+}
+
+/* Hover effect */
+.fixture-table tbody tr:hover td {
+  background: #444 !important;
+  color: white !important;
+}
+
+.first-team h2 {
+  color: #b30000;
+}
+
+.reserve-team h2 {
+  color: white;
+}
+
+.kickoff-note {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* ---------------------------------------------------
+   SECTION FIXES
+--------------------------------------------------- */
+
+.section.fixture-table {
+  padding-top: 0;
+}
+
+.section-white {
+  background: white;
+  color: black;
+}
+
+.section-red {
+  background: #b30000;
+  color: white;
+  padding: 40px 0;
+  margin-bottom: 0;
+}
+
+.section {
+  width: 100%;
+  display: block;
+}
+
+/* ---------------------------------------------------
+   FOOTER FIX (APPLIED)
+--------------------------------------------------- */
+
+.footer-inner {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------------------------------------------------
+   red section fixture table text fix
+--------------------------------------------------- */
+
+.section-red .fixture-table td,
+.section-red .fixture-table th {
+  color: white !important;
+}
+
+.section-red .fixture-table.first-team h2 {
+  color: white !important;
+}
+
+/* ---------------------------------------------------
+   NEW: FIRST TEAM LEAGUE TABLE (WHITE SECTION)
+--------------------------------------------------- */
+
+.league-table.white-bg {
+  background: #ffffff;
+  color: #111;
+  padding: 30px 20px 40px 20px;
+  border-radius: 6px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.league-table.white-bg h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #111;
+  font-family: 'Oswald', sans-serif;
+}
+
+.league-table.white-bg table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.league-table.white-bg th,
+.league-table.white-bg td {
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #111;
+}
+
+/* Header styling for white section */
+.league-table.white-bg th {
+  background: #eee;
+  color: #111;
+  font-weight: bold;
+}
+
+/* Zebra striping */
+.league-table.white-bg tbody tr:nth-child(even) td {
+  background: #f7f7f7;
+}
+
+.league-table.white-bg tbody tr:nth-child(odd) td {
+  background: #ffffff;
+}
+
+/* ---------------------------------------------------
+   LIVE LEAGUE TABLE EMBED
+--------------------------------------------------- */
+
+.league-embed iframe {
+  width: 100%;
+  border: none;
+}
+
+/* ---------------------------------------------------
+   POLISH: LINK STYLING INSIDE WHITE SECTION
+--------------------------------------------------- */
+
+.section-white a {
+  color: #b30000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-white a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------
+   LIVE TABLE: NONLEAGUEHQ TABLE STYLING
+--------------------------------------------------- */
+
+#live-league-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+#live-league-table th,
+#live-league-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+#live-league-table th {
+  background: #eee;
+  font-weight: bold;
+}
+
+/* Zebra striping for readability */
+#live-league-table tbody tr:nth-child(even) td {
+  background: #f7f7f7;
+}
+
+#live-league-table tbody tr:nth-child(odd) td {
+  background: #ffffff;
+}
+
+/* Optional: Shortwood highlight class (if needed later) */
+.shortwood-highlight {
+  background: #b30000 !important;
+  color: white !important;
+  font-weight: bold !important;
+}

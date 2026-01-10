@@ -1,0 +1,36 @@
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+
+.footer {
+  background: #000;
+  color: white;
+  padding: 40px 0;
+  margin-top: 0;
+}
+
+.footer a {
+  color: #ffcccc;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;   /* centers the icons */
+}
+
+.social-icons .icon svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+/* Remove footer-shift entirely — no longer needed */
+/* .footer-shift { ... }  ← deleted */
+
+/* Center all footer text */
+.footer .container {
+  text-align: center;
+}

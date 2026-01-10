@@ -37,10 +37,14 @@ a:hover {
    MAIN LAYOUT (DESKTOP)
    ============================ */
 .main-layout {
-  display: flex;            /* Create two-column layout */
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
   gap: 20px;
+  width: 100%; 
 }
+
+
 
 /* Left column: sponsor sidebar */
 .sponsor-sidebar {

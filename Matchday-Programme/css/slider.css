@@ -1,0 +1,92 @@
+/* ---------------------------------------------------
+   SLIDER WRAPPER
+--------------------------------------------------- */
+
+.slider-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  min-height: 260px;
+}
+
+/* Track holds all slides in a row */
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+/* Each slide takes up full width */
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  padding: 20px 0;
+}
+
+/* ---------------------------------------------------
+   REPORT CARD
+--------------------------------------------------- */
+
+.report-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.report-card h3 {
+  margin-top: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+.report-subtitle {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.report-link a {
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------
+   SLIDER BUTTONS
+--------------------------------------------------- */
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.slider-btn:hover {
+  opacity: 1;
+}
+
+.slider-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.slider-btn.left {
+  left: 20px;
+}
+
+.slider-btn.right {
+  right: 20px;
+}

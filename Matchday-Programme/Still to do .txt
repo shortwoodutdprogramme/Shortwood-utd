@@ -1,0 +1,7 @@
+ REPORTS
+• 	auto‑sorting reports by date
+• 	adding thumbnails or team badges
+• 	tagging reports (League, Cup, Vase, Friendly)
+• 	adding a “Latest Report” highlight box
+• 	or even generating the JSON automatically from filenames
+
