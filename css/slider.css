@@ -16,15 +16,9 @@
 /* Track holds all slides in a row */
 .slider-track {
   display: flex;
-  flex-wrap: nowrap;
   transition: transform 0.4s ease;
   will-change: transform;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
 }
-
-
 
 /* Each slide takes up full width */
 .slide {
@@ -32,13 +26,6 @@
   min-width: 100%;
   padding: 20px 0;
 }
-
-.report-slide {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-
 
 /* ---------------------------------------------------
    REPORT CARD
