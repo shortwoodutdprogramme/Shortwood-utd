@@ -1,15 +1,4 @@
 /* ---------------------------------------------------
-   MAIN LAYOUT WRAPPER
---------------------------------------------------- */
-
-.main-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;   /* Sidebar matches main-content height */
-  width: 100%;
-}
-
-/* ---------------------------------------------------
    HALO HEADER (SCROLLS WITH PAGE)
 --------------------------------------------------- */
 
@@ -29,9 +18,9 @@
   margin: 0 auto;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;        /* horizontal layout */
+  align-items: center;        /* vertically align badge + nav + menu */
+  justify-content: space-between; /* badge left, nav centre, menu right */
   gap: 12px;
 }
 
@@ -71,39 +60,4 @@
   width: 25px;
   height: 3px;
   background: white;
-}
-
-/* ---------------------------------------------------
-   SPONSOR SIDEBAR (SCROLLS WITH PAGE)
---------------------------------------------------- */
-
-.sponsor-sidebar {
-  position: relative;
-  width: 180px;
-  background: #d0d0d0;
-  padding: 20px 15px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  /* Soft edge instead of a thick border */
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Larger, clean sponsor blocks */
-.sponsor-sidebar img {
-  width: 100%;
-  border-radius: 6px;
-  display: block;
-}
-
-/* ---------------------------------------------------
-   MAIN CONTENT AREA
---------------------------------------------------- */
-
-.main-content {
-  flex: 1;
-  padding: 0 20px;
-  text-align: center;   /* Centres main content text */
 }
